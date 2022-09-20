@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS goodweeds_db;
+CREATE DATABASE goodweeds_db;
