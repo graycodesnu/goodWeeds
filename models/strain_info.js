@@ -6,3 +6,4 @@
 //   - Type 
 //   - Review ID
 //   - Is favorite?
+
