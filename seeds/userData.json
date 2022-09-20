@@ -1,0 +1,23 @@
+[
+    {
+      "first-name": "Sally",
+      "last-name": "Parker",
+      "username": "sparker23",
+      "email": "sal@hotmail.com",
+      "password": "password12345"
+    },
+    {
+      "first-name": "Lawrence",
+      "last-name": "Smith",
+      "username": "larrysmith",
+      "email": "larrysmith@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "first-name": "Alicia",
+      "last-name": "Woods",
+      "username": "aliciawoods",
+      "email": "alicia2k20@aol.com",
+      "password": "password12345"
+    }
+  ]
