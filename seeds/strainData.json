@@ -5,8 +5,6 @@
         "positive-effects": ["energetic", "talkative", "creative"],
         "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
 
-        // TODO: "image": ""
-
 
     },
     {
@@ -15,7 +13,6 @@
         "positive-effects": ["relaxed", "hungry", "creative"],
         "negative-effects": ["dizzy", "anxious", "paranoid"]
         
-        // TODO: "image": ""
 
     },
     {
@@ -24,7 +21,6 @@
         "positive-effects": ["relaxed", "sleepy", "hungry"],
         "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -33,7 +29,6 @@
         "positive-effects": ["creative", "uplifted", "energetic"],
         "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -42,7 +37,6 @@
         "positive-effects": ["energetic", "talkative", "creative"],
         "negative-effects": ["paranoid", "dry mouth", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -51,34 +45,30 @@
         "positive-effects": ["hungry", "giggly", "happy"],
         "negative-effects": ["dry mouth", "dry eyes", "paranoid"]
 
-        // TODO: "image": ""
 
     },
     {
         "name": "Mac 1",
         "type": "hybrid",
-        "positive-effects": ["uplifted", "euphoric", "energetic"]
-        "negative-effects": ["dizzy", "anxious", "paranoid"],
+        "positive-effects": ["uplifted", "euphoric", "energetic"],
+        "negative-effects": ["dizzy", "anxious", "paranoid"]
 
-        // TODO: "image": ""
 
     },
     {
         "name": "Jack Herer",
         "type": "sativa",
         "positive-effects": ["energetic", "creative", "uplifted"],
-        "negative-effects": ["paranoid", "dry eyes", "dry mouth"],
+        "negative-effects": ["paranoid", "dry eyes", "dry mouth"]
 
-        // TODO: "image": ""
 
     },
     {
         "name": "Pineapple Express",
         "type": "hybrid",
-        "positive-effects": ["energetic"m "happy", "talkative"],
-        "negative-effects": ["dry mouth", "paranoid", "dry eyes"],
+        "positive-effects": ["energetic", "happy", "talkative"],
+        "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -87,16 +77,14 @@
         "positive-effects": ["relaxed", "giggly", "happy"],
         "negative-effects": ["headache", "paranoid", "dizzy"]
 
-        // TODO: "image": ""
 
     },
     {
         "name": "Mandarin Cookies",
         "type": "hybrid",
         "positive-effects": ["uplifted", "talkative", "relaxed"],
-        "negative-effects": ["dry eyes", "headache", "paranoid"],
+        "negative-effects": ["dry eyes", "headache", "paranoid"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -105,7 +93,6 @@
         "positive-effects": ["creative", "energetic", "euphoric"],
         "negative-effects": ["dizzy", "dry eyes", "dry mouth"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -114,7 +101,6 @@
         "positive-effects": ["happy", "sleepy", "talkative"],
         "negative-effects": ["paranoid", "headache", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -123,7 +109,6 @@
         "positive-effects": ["tingly", "uplifted", "euphoric"],
         "negative-effects": ["dizzy", "dry mouth", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -132,8 +117,6 @@
         "positive-effects": ["sleepy", "hungry", "relaxed"],
         "negative-effects": ["headache", "dry eyes", "dizzy"]
 
-        // TODO "image": ""
-
     },
     {
         "name": "Bio-Jesus",
@@ -141,7 +124,6 @@
         "positive-effects": ["sleepy", "relaxed", "hungry"],
         "negative-effects": ["dry eyes", "dizzy", "dry mouth"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -150,7 +132,6 @@
         "positive-effects": ["creative", "tingly", "uplifted"],
         "negative-effects": ["anxious", "dizzy", "headache"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -159,7 +140,6 @@
         "positive-effects": ["happy", "hungry", "euphoric"],
         "negative-effects": ["dry eyes", "dry mouth", "headache"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -168,7 +148,6 @@
         "positive-effects": ["happy", "euphoric", "sleepy"],
         "negative-effects": ["headache", "dry mouth", "dizzy"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -177,25 +156,22 @@
         "positive-effects": ["sleepy", "hungry", "relaxed"],
         "negative-effects": ["dry mouth", "dry eyes", "dizzy"]
 
-        // TODO: "image": ""
 
     },
     {
         "name": "OG Kush",
         "type": "hybrid",
         "positive-effects": ["hungry", "sleepy", "euphoric"],
-        "negative-effects": ["dry mouth", "dry eyes", "paranoid"],
+        "negative-effects": ["dry mouth", "dry eyes", "paranoid"]
 
-        // TODO: "image": ""
 
     },
     {
         "name": "Green Crack",
         "type": "sativa",
         "positive-effects": ["energetic", "focused", "talkative"],
-        "negative-effects": ["paranoid", "anxious", "dry eyes"],
+        "negative-effects": ["paranoid", "anxious", "dry eyes"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -204,7 +180,6 @@
         "positive-effects": ["energetic", "talkative", "giggly"],
         "negative-effects": ["paranoid", "dry mouth", "dizzy"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -213,7 +188,6 @@
         "positive-effects": ["energetic", "talkative", "uplifted"],
         "negative-effects": ["dry mouth", "dry eyes", "paranoid"]
 
-        // TODO: "image": ""
 
     },
     {
@@ -222,7 +196,6 @@
         "positive-effects": ["energetic", "creative", "talkative"],
         "negative-effects": ["paranoid", "dry mouth", "dizzy"]
 
-        // TODO: "image": ""
 
     }
 

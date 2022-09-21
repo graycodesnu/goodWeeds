@@ -14,7 +14,7 @@ const seedDatabase = async () => {
 
   for (const strain of strainData) {
     await Strain.create({
-      ...sroject,
+      ...strain,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
