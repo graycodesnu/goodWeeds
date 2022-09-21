@@ -23,7 +23,6 @@ Review.init(
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-
         },
         content: {
             type: DataTypes.STRING,
@@ -46,8 +45,7 @@ Review.init(
             allowNull: false,
         },
         timestamp: {
-            type: DataTypes.TIMESTAMP,
-            defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
+            type: DataTypes.STRING,
             allowNull: false,
         },
     },
