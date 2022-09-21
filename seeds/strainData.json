@@ -2,199 +2,199 @@
     {
         "name": "White Widow",
         "type": "hybrid",
-        "positive-effects": ["energetic", "talkative", "creative"],
-        "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
+        "positive_effects": ["energetic", "talkative", "creative"],
+        "negative_effects": ["dry mouth", "paranoid", "dry eyes"]
 
 
     },
     {
         "name": "Wedding Cake",
         "type": "hybrid",
-        "positive-effects": ["relaxed", "hungry", "creative"],
-        "negative-effects": ["dizzy", "anxious", "paranoid"]
+        "positive_effects": ["relaxed", "hungry", "creative"],
+        "negative_effects": ["dizzy", "anxious", "paranoid"]
         
 
     },
     {
         "name": "GG4",
         "type": "hybrid",
-        "positive-effects": ["relaxed", "sleepy", "hungry"],
-        "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
+        "positive_effects": ["relaxed", "sleepy", "hungry"],
+        "negative_effects": ["dry mouth", "paranoid", "dry eyes"]
 
 
     },
     {
         "name": "Blue Dream",
         "type": "hybrid",
-        "positive-effects": ["creative", "uplifted", "energetic"],
-        "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
+        "positive_effects": ["creative", "uplifted", "energetic"],
+        "negative_effects": ["dry mouth", "paranoid", "dry eyes"]
 
 
     },
     {
         "name": "Sour Diesel",
         "type": "sativa",
-        "positive-effects": ["energetic", "talkative", "creative"],
-        "negative-effects": ["paranoid", "dry mouth", "dry eyes"]
+        "positive_effects": ["energetic", "talkative", "creative"],
+        "negative_effects": ["paranoid", "dry mouth", "dry eyes"]
 
 
     },
     {
         "name": "Girl Scout Cookies",
         "type": "hybrid",
-        "positive-effects": ["hungry", "giggly", "happy"],
-        "negative-effects": ["dry mouth", "dry eyes", "paranoid"]
+        "positive_effects": ["hungry", "giggly", "happy"],
+        "negative_effects": ["dry mouth", "dry eyes", "paranoid"]
 
 
     },
     {
         "name": "Mac 1",
         "type": "hybrid",
-        "positive-effects": ["uplifted", "euphoric", "energetic"],
-        "negative-effects": ["dizzy", "anxious", "paranoid"]
+        "positive_effects": ["uplifted", "euphoric", "energetic"],
+        "negative_effects": ["dizzy", "anxious", "paranoid"]
 
 
     },
     {
         "name": "Jack Herer",
         "type": "sativa",
-        "positive-effects": ["energetic", "creative", "uplifted"],
-        "negative-effects": ["paranoid", "dry eyes", "dry mouth"]
+        "positive_effects": ["energetic", "creative", "uplifted"],
+        "negative_effects": ["paranoid", "dry eyes", "dry mouth"]
 
 
     },
     {
         "name": "Pineapple Express",
         "type": "hybrid",
-        "positive-effects": ["energetic", "happy", "talkative"],
-        "negative-effects": ["dry mouth", "paranoid", "dry eyes"]
+        "positive_effects": ["energetic", "happy", "talkative"],
+        "negative_effects": ["dry mouth", "paranoid", "dry eyes"]
 
 
     },
     {
         "name": "Cereal Milk",
         "type": "hybrid",
-        "positive-effects": ["relaxed", "giggly", "happy"],
-        "negative-effects": ["headache", "paranoid", "dizzy"]
+        "positive_effects": ["relaxed", "giggly", "happy"],
+        "negative_effects": ["headache", "paranoid", "dizzy"]
 
 
     },
     {
         "name": "Mandarin Cookies",
         "type": "hybrid",
-        "positive-effects": ["uplifted", "talkative", "relaxed"],
-        "negative-effects": ["dry eyes", "headache", "paranoid"]
+        "positive_effects": ["uplifted", "talkative", "relaxed"],
+        "negative_effects": ["dry eyes", "headache", "paranoid"]
 
 
     },
     {
         "name": "Bruce Banner",
         "type": "hybrid",
-        "positive-effects": ["creative", "energetic", "euphoric"],
-        "negative-effects": ["dizzy", "dry eyes", "dry mouth"]
+        "positive_effects": ["creative", "energetic", "euphoric"],
+        "negative_effects": ["dizzy", "dry eyes", "dry mouth"]
 
 
     },
     {
         "name": "Alien Cookies",
         "type": "hybrid",
-        "positive-effects": ["happy", "sleepy", "talkative"],
-        "negative-effects": ["paranoid", "headache", "dry eyes"]
+        "positive_effects": ["happy", "sleepy", "talkative"],
+        "negative_effects": ["paranoid", "headache", "dry eyes"]
 
 
     },
     {
         "name": "Grape Stomper",
         "type": "hybrid",
-        "positive-effects": ["tingly", "uplifted", "euphoric"],
-        "negative-effects": ["dizzy", "dry mouth", "dry eyes"]
+        "positive_effects": ["tingly", "uplifted", "euphoric"],
+        "negative_effects": ["dizzy", "dry mouth", "dry eyes"]
 
 
     },
     {
         "name": "Bubba Fett",
         "type": "hybrid",
-        "positive-effects": ["sleepy", "hungry", "relaxed"],
-        "negative-effects": ["headache", "dry eyes", "dizzy"]
+        "positive_effects": ["sleepy", "hungry", "relaxed"],
+        "negative_effects": ["headache", "dry eyes", "dizzy"]
 
     },
     {
         "name": "Bio-Jesus",
         "type": "hybrid",
-        "positive-effects": ["sleepy", "relaxed", "hungry"],
-        "negative-effects": ["dry eyes", "dizzy", "dry mouth"]
+        "positive_effects": ["sleepy", "relaxed", "hungry"],
+        "negative_effects": ["dry eyes", "dizzy", "dry mouth"]
 
 
     },
     {
         "name": "Cherry Chem",
         "type": "hybrid",
-        "positive-effects": ["creative", "tingly", "uplifted"],
-        "negative-effects": ["anxious", "dizzy", "headache"]
+        "positive_effects": ["creative", "tingly", "uplifted"],
+        "negative_effects": ["anxious", "dizzy", "headache"]
 
 
     },
     {
         "name": "Bubble Gum",
         "type": "hybrid",
-        "positive-effects": ["happy", "hungry", "euphoric"],
-        "negative-effects": ["dry eyes", "dry mouth", "headache"]
+        "positive_effects": ["happy", "hungry", "euphoric"],
+        "negative_effects": ["dry eyes", "dry mouth", "headache"]
 
 
     },
     {
         "name": "Burnt Toast",
         "type": "hybrid",
-        "positive-effects": ["happy", "euphoric", "sleepy"],
-        "negative-effects": ["headache", "dry mouth", "dizzy"]
+        "positive_effects": ["happy", "euphoric", "sleepy"],
+        "negative_effects": ["headache", "dry mouth", "dizzy"]
 
 
     },
     {
         "name": "Northern Lights",
         "type": "indica",
-        "positive-effects": ["sleepy", "hungry", "relaxed"],
-        "negative-effects": ["dry mouth", "dry eyes", "dizzy"]
+        "positive_effects": ["sleepy", "hungry", "relaxed"],
+        "negative_effects": ["dry mouth", "dry eyes", "dizzy"]
 
 
     },
     {
         "name": "OG Kush",
         "type": "hybrid",
-        "positive-effects": ["hungry", "sleepy", "euphoric"],
-        "negative-effects": ["dry mouth", "dry eyes", "paranoid"]
+        "positive_effects": ["hungry", "sleepy", "euphoric"],
+        "negative_effects": ["dry mouth", "dry eyes", "paranoid"]
 
 
     },
     {
         "name": "Green Crack",
         "type": "sativa",
-        "positive-effects": ["energetic", "focused", "talkative"],
-        "negative-effects": ["paranoid", "anxious", "dry eyes"]
+        "positive_effects": ["energetic", "focused", "talkative"],
+        "negative_effects": ["paranoid", "anxious", "dry eyes"]
 
 
     },
     {
         "name": "Amnesia Haze",
         "type": "sativa",
-        "positive-effects": ["energetic", "talkative", "giggly"],
-        "negative-effects": ["paranoid", "dry mouth", "dizzy"]
+        "positive_effects": ["energetic", "talkative", "giggly"],
+        "negative_effects": ["paranoid", "dry mouth", "dizzy"]
 
 
     },
     {
         "name": "Alaskan Thunder Fuck",
         "type": "sativa",
-        "positive-effects": ["energetic", "talkative", "uplifted"],
-        "negative-effects": ["dry mouth", "dry eyes", "paranoid"]
+        "positive_effects": ["energetic", "talkative", "uplifted"],
+        "negative_effects": ["dry mouth", "dry eyes", "paranoid"]
 
 
     },
     {
         "name": "Purple Haze",
         "type": "sativa",
-        "positive-effects": ["energetic", "creative", "talkative"],
-        "negative-effects": ["paranoid", "dry mouth", "dizzy"]
+        "positive_effects": ["energetic", "creative", "talkative"],
+        "negative_effects": ["paranoid", "dry mouth", "dizzy"]
 
 
     }
