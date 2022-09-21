@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
     // ! Grayson has to use 127.0.0.1 ... DOUBLE-CHECK THAT YOURS IS SET TO LOCALHOST! 
     host: 'localhost',
     dialect: 'mysql',
-    port: 3001,
+    port: 3306,
   }
 );
 
