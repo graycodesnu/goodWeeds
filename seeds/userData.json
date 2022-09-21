@@ -1,22 +1,22 @@
 [
     {
-      "first-name": "Sally",
-      "last-name": "Parker",
-      "username": "sparker23",
+      "first_name": "Sally",
+      "last_name": "Parker",
+      "user_name": "sparker23",
       "email": "sal@hotmail.com",
       "password": "password12345"
     },
     {
-      "first-name": "Lawrence",
-      "last-name": "Smith",
-      "username": "larrysmith",
+      "first_name": "Lawrence",
+      "last_name": "Smith",
+      "user_name": "larrysmith",
       "email": "larrysmith@gmail.com",
       "password": "password12345"
     },
     {
-      "first-name": "Alicia",
-      "last-name": "Woods",
-      "username": "aliciawoods",
+      "first_name": "Alicia",
+      "last_name": "Woods",
+      "user_name": "aliciawoods",
       "email": "alicia2k20@aol.com",
       "password": "password12345"
     }
