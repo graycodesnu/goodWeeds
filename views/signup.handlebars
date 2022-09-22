@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="home">
+        <div id="header">
+            <h3>goodWeeds</h3>
+        </div>
+
+        <div id="description">
+            <h5 style="margin-top: 15%;">Weed love to know more about you!</h5>
+        </div>
+
+        <div id="signupForm" class="boxBorder">
+            <div id="form">
+                <form action="/signup" method="post">
+                    <div class="mb-3 signupFormDiv">
+                        <label for="fname" class="label">First Name</label>
+                        <input type="text" name="fname" class="form-control" id="exampleInputEmail1" required>
+                    </div>
+                    <div class="mb-3 signupFormDiv">
+                        <label for="lname" class="label">Last Name</label>
+                        <input type="text" name="lname" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+                    <div class="mb-3 signupFormDiv">
+                        <label for="username" class="label">Username</label>
+                        <input type="text" name="username" class="form-control" id="exampleInputPassword1"
+                        placeholder="weedguy420" required>
+                    </div>
+                    <div class="mb-3 signupFormDiv">
+                        <label for="password" class="label">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary buttoBorder">Blaze On</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
