@@ -120,21 +120,21 @@ router.get('api/review/:id', (req, res) => {
 
 // post review
 // todo debug
-router.post('/post-review', (req, res) => {
-    try {
-        const { user_id, content, rating, strain_id, title, timestamp } = req.body;
+// router.post('/post-review', (req, res) => {
+//     try {
+//         const { user_id, content, rating, strain_id, title, timestamp } = req.body;
 
-    res.send(`${title} <br>
-        ${rating} <br>
-        ${strain_id} <br>
-        ${content}
-        ${user_id}
-        ${timestamp}`
-    );
-} catch (err) {
-    res.status(400).json(err)
-}
-});
+//     res.send(`${title} <br>
+//         ${rating} <br>
+//         ${strain_id} <br>
+//         ${content}
+//         ${user_id}
+//         ${timestamp}`
+//     );
+// } catch (err) {
+//     res.status(400).json(err)
+// }
+// });
 
 // router.post('/signup', (req, res) => {
 //     const { fname, lname, username, password } = req.body;
@@ -144,3 +144,21 @@ router.post('/post-review', (req, res) => {
 //                 Username : ${username} <br>
 //                 Password : ${password}`);
 // })
+
+//Refactored POST for Review
+router.post('/review', async (req, res) => {
+    try {
+      const locationData = await Review.create({
+        user_id: req.body.user_id,
+        content: req.body.content,
+        rating: req.body.rating,
+        strain_id: req.body.strain_id,
+        title: req.body.title,
+        timestamp: req.body.timestamp,
+
+      });
+      res.status(200).json(locationData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
