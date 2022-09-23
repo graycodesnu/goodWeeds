@@ -129,6 +129,25 @@ router.get("api/favorite/:id", (req, res) => {
     .catch((error) => res.status(400).json(error));
 });
 
+
+// post review
+// todo debug
+// router.post('/post-review', (req, res) => {
+//     try {
+//         const { user_id, content, rating, strain_id, title, timestamp } = req.body;
+
+//     res.send(`${title} <br>
+//         ${rating} <br>
+//         ${strain_id} <br>
+//         ${content}
+//         ${user_id}
+//         ${timestamp}`
+//     );
+// } catch (err) {
+//     res.status(400).json(err)
+// }
+// });
+
 // POST favorite
 router.post("/post-favorite", (req, res) => {
   const { strain_id } = req.body;
@@ -138,5 +157,29 @@ router.post("/post-favorite", (req, res) => {
 });
 // DELETE favorite
 
+
+//     res.send(`First name : ${fname} <br>
+//                 Last name : ${lname} <br>
+//                 Username : ${username} <br>
+//                 Password : ${password}`);
+// })
+
+//Refactored POST for Review
+router.post('/review', async (req, res) => {
+    try {
+      const locationData = await Review.create({
+        user_id: req.body.user_id,
+        content: req.body.content,
+        rating: req.body.rating,
+        strain_id: req.body.strain_id,
+        title: req.body.title,
+        timestamp: req.body.timestamp,
+
+      });
+      res.status(200).json(locationData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 module.exports = router;
