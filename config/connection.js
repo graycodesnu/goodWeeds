@@ -7,7 +7,7 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     // ! Grayson has to use 127.0.0.1 ... DOUBLE-CHECK THAT YOURS IS SET TO LOCALHOST! 
-    host: 'localhost',
+    host: '127.0.0.1',
     dialect: 'mysql',
     port: 3306,
   }
