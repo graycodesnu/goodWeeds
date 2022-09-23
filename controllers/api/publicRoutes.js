@@ -182,4 +182,20 @@ router.post('/review', async (req, res) => {
     }
   });
 
+  router.post('/signup', async (req, res) => {
+    try {
+      const newUserData = await user.create({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        user_name: req.body.user_name,
+        email: req.body.email,
+        password: req.body.password,
+  
+      });
+      res.status(200).json(newUserData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
 module.exports = router;
