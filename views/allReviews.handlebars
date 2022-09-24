@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <div id="allReviewSection" class="d-flex flex-column gap-3">
+
+        <div id="header">
+            <span>goodWeeds</span>
+        </div>
+
+        <div id="filter" class="row">
+            <div class="col" id="logo">
+                <button type="button" id="logoBtn" class="btn bgWhite wgBorder">Weed Feed</button>
+            </div>
+
+            <div class="col" id="logo">
+                <button type="button" id="logoBtn" class="btn bgWhite wgBorder">Browse</button>
+            </div>
+        </div>
+
+        <div id="allReviews">
+            <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
+
+            <div id="revSec">
+
+                <form action="/postReview" method="post">
+                    <div id="postRev">
+                        <div id="postRevHead" class="wgBorder">
+                            <h5>Thoughts? Write'em here.</h5>
+                        </div>
+
+                        <div id="postRevInp">
+                            <input type="text" name="title" id="postRevInpTitle" class="wgBorder"
+                                placeholder="Which strain are you reviewing?" required>
+                        </div>
+
+                        <div id="postRatingMainDiv">
+                            <div id="postRating">
+                                <i class="fa-solid fa-2x fa-star"></i>
+                                <i class="fa-solid fa-2x fa-star"></i>
+                                <i class="fa-solid fa-2x fa-star"></i>
+                                <i class="fa-solid fa-2x fa-star"></i>
+                                <i class="fa-regular fa-2x fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                        <div id="postRevInpDescDiv">
+                            <textarea name="desc" id="postRevInpDesc" class="wgBorder" cols="40" rows="10"
+                                placeholder="Write your review here, my dude." required></textarea>
+                        </div>
+
+                        <div id="subBtnMainDiv">
+                            <div id="subBtnDiv">
+                                <button type="submit" id="subBtn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="showAllRev">
+
+                    <div class="oneRev wgBorder">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="reviewTitleDiv">
+                                    <h4 class="reviewTitle">STRAIN TITLE</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        Effects blah blah blah blah blah blah blah blah
+                                    </li>
+                                    <li>
+                                        From blah blah blah blah blah blah
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oneRev wgBorder">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="reviewTitleDiv">
+                                    <h4 class="reviewTitle">STRAIN TITLE</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        Effects blah blah blah blah blah blah blah blah
+                                    </li>
+                                    <li>
+                                        From blah blah blah blah blah blah
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oneRev wgBorder">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="reviewTitleDiv">
+                                    <h4 class="reviewTitle">STRAIN TITLE</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        Effects blah blah blah blah blah blah blah blah
+                                    </li>
+                                    <li>
+                                        From blah blah blah blah blah blah
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="oneRev wgBorder">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <div class="reviewTitleDiv">
+                                    <h4 class="reviewTitle">STRAIN TITLE</h4>
+                                </div>
+                                <ul>
+                                    <li>
+                                        Effects blah blah blah blah blah blah blah blah
+                                    </li>
+                                    <li>
+                                        From blah blah blah blah blah blah
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
