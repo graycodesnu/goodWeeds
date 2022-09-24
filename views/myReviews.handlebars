@@ -13,104 +13,26 @@
 
     <div id="myReviews" class="d-flex flex-column gap-3">
 
-        <div id="header">
-            <span>goodWeeds</span>
-        </div>
-        
-        <div id="filter" class="row">
-            <div class="col" id="logo">
-                <button type="button" id="logoBtn" class="btn bgWhite wgBorder">Weed Feed</button>
-            </div>
+{{!-- tab buttons --}}
+      <div>
+        <button class="tablinks"onclick="openMyFavorites(event, 'My Reviews')">Favorites</button>
+      </div>
 
-            <div class="dropdown col" id="filterDD">
-                <button class="btn btn-secondary dropdown-toggle wgBorder" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Browse
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button class="dropdown-item" type="button">Action</button></li>
-                    <li><button class="dropdown-item" type="button">Another action</button></li>
-                    <li><button class="dropdown-item" type="button">Something else here</button></li>
-                </ul>
-            </div>
-        </div>
+      <div>
+        <button class = "tablinks" onclick="openMyReviews(event)">My Reviews</button>
+      </div>
 
-        <div id="reviews" class="wgBorder">
-            <div id="topCate" class="row">
-                <div class="col" id="favorites">
-                    <button type="button" id="favoritesBtn" class="btn">Favorites</button>
-                </div>
+{{!-- tab content --}}
+       <div id="myFavorites" class="myFavoritesContent">
+        <h3>Favorites</h3>
+        <p>Favorites Content Placeholder</p>
+       </div>
+       
+       <div id="myReviews" class="myReviewContent">
+        <h3>My Reviews</h3>
+        <p>My Review Content Placeholder</p>
+       </div>
 
-                <div class="col" id="myRev">
-                    <button type="button" id="myRevBtn" class="btn">My Reviews</button>
-                </div>
-            </div>
-
-            <div id="allReviews">
-
-                <div class="singleRev wgBorder">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="reviewTitleDiv">
-                                <h4 class="reviewTitle">STRAIN TITLE</h4>
-                            </div>
-                            <ul>
-                                <li>
-                                    Effects blah blah blah blah blah blah blah blah
-                                </li>
-                                <li>
-                                    From blah blah blah blah blah blah
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="singleRev wgBorder">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="reviewTitleDiv">
-                                <h4 class="reviewTitle">STRAIN TITLE</h4>
-                            </div>
-                            <ul>
-                                <li>
-                                    Effects blah blah blah blah blah blah blah blah
-                                </li>
-                                <li>
-                                    From blah blah blah blah blah blah
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="singleRev wgBorder">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <img src="/images/pp.jpg" class="reviewImg" alt="reviewImg">
-                        </div>
-                        <div class="flex-grow-1 ms-3">
-                            <div class="reviewTitleDiv">
-                                <h4 class="reviewTitle">STRAIN TITLE</h4>
-                            </div>
-                            <ul>
-                                <li>
-                                    Effects blah blah blah blah blah blah blah blah
-                                </li>
-                                <li>
-                                    From blah blah blah blah blah blah blah!!
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
