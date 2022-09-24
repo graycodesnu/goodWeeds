@@ -3,6 +3,8 @@ const router = new express.Router();
 const strain = require("../../models/strain");
 const review = require("../../models/review");
 const favorite = require("../../models/favorites");
+const Favorites = require("../../models/favorites");
+const { reset } = require("nodemon");
 
 //* AGE VERIFICATION ROUTES
 // GET verify age
@@ -36,15 +38,31 @@ router.get("/signup", (req, res) => {
 });
 
 // POST signup
-router.post("/signup", (req, res) => {
-  const { fname, lname, username, password } = req.body;
-  res.send(
-    `First name : ${fname} <br>
-      Last name : ${lname} <br>
-      Username : ${username} <br>
-      Password : ${password}`
-  );
-});
+// router.post("/signup", (req, res) => {
+//   const { fname, lname, username, password } = req.body;
+//   res.send(
+//     `First name : ${fname} 
+//       Last name : ${lname} 
+//       Username : ${username} 
+//       Password : ${password}`
+//   );
+// });
+
+  router.post('/signup', async (req, res) => {
+    try {
+      const newUserData = await user.create({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        user_name: req.body.user_name,
+        email: req.body.email,
+        password: req.body.password,
+  
+      });
+      res.status(200).json(newUserData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 //* STRAIN ROUTES
 // GET all strains
@@ -96,9 +114,9 @@ router.post("/post-review", (req, res) => {
     const { user_id, content, rating, strain_id, title, timestamp } = req.body;
 
     res.send(`
-      ${title} <br>
-      ${rating} <br>
-      ${strain_id} <br>
+      ${title} 
+      ${rating} 
+      ${strain_id} 
       ${content}
       ${user_id}
       ${timestamp}`);
@@ -118,6 +136,7 @@ router.get("/favorites", (req, res) => {
 });
 
 // GET favorites by ID
+// TODO: Debug
 router.get("api/favorite/:id", (req, res) => {
   favorite
     .findByPk({
@@ -129,73 +148,43 @@ router.get("api/favorite/:id", (req, res) => {
     .catch((error) => res.status(400).json(error));
 });
 
-
-// post review
-// todo debug
-// router.post('/post-review', (req, res) => {
-//     try {
-//         const { user_id, content, rating, strain_id, title, timestamp } = req.body;
-
-//     res.send(`${title} <br>
-//         ${rating} <br>
-//         ${strain_id} <br>
-//         ${content}
-//         ${user_id}
-//         ${timestamp}`
-//     );
-// } catch (err) {
-//     res.status(400).json(err)
-// }
-// });
-
 // POST favorite
-router.post("/post-favorite", (req, res) => {
-  const { strain_id } = req.body;
-  res.send(
-    `${strain_id}`
-  );
+router.post("/post-favorite", async (req, res) => {
+  try {
+  const newFav =  await Favorites.create(req.body);
+  //  { strain_id, name, positive_effects, negative_effects, type } = req.body;
+    // res.send(
+    // `${strain_id}
+    // ${name}
+    // ${positive_effects}
+    // ${negative_effects}
+    // ${type}`
+  // );
+  res.status(200).json(newFav);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
+
 // DELETE favorite
+router.delete('/delete-fav/:id', async (req, res) => {
+  // delete a category by its `id` value
+  try {
+    const  deletFav = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
 
-
-//     res.send(`First name : ${fname} <br>
-//                 Last name : ${lname} <br>
-//                 Username : ${username} <br>
-//                 Password : ${password}`);
-// })
-
-//Refactored POST for Review
-router.post('/review', async (req, res) => {
-    try {
-      const locationData = await Review.create({
-        user_id: req.body.user_id,
-        content: req.body.content,
-        rating: req.body.rating,
-        strain_id: req.body.strain_id,
-        title: req.body.title,
-        timestamp: req.body.timestamp,
-
-      });
-      res.status(200).json(locationData);
-    } catch (err) {
-      res.status(400).json(err);
+    if (!categoryData) {
+      res.status(404).json({ message: 'Invalid' });
+      return;
     }
-  });
 
-  router.post('/signup', async (req, res) => {
-    try {
-      const newUserData = await user.create({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        user_name: req.body.user_name,
-        email: req.body.email,
-        password: req.body.password,
-  
-      });
-      res.status(200).json(newUserData);
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  });
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
