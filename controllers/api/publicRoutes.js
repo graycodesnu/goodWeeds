@@ -80,8 +80,11 @@ router.get("/api/strain/:id", (req, res) => {
 router.get("/reviews", (req, res) => {
   review
     .findAll({})
-    .then((review) => res.json(review))
-    .catch((error) => res.status(400).json(error));
+    // .then((review) => res.json(review))
+    return res.render('allReviews')
+    // res.send("REVIEW PAGE")
+    // res.send(reviews)
+    // .catch((error) => res.status(400).json(error));
 });
 // GET review by ID
 router.get("api/review/:id", (req, res) => {
