@@ -1,4 +1,18 @@
 
+const express = require("express");
+const router = new express.Router();
+const strain = require("../../models/strain");
+const review = require("../../models/review");
+const favorite = require("../../models/favorites");
+const Favorites = require("../../models/favorites");
+const { reset } = require("nodemon");
+
+//* AGE VERIFICATION ROUTES
+// GET verify age
+router.get("/", (req, res) => {
+  return res.render("verifyAge");
+});
+
 const express = require('express');
 const router = new express.Router();
 const strain = require('../../models/strain');
@@ -49,6 +63,34 @@ router.post('/signup', async (req, res) => {
 });
 
 
+// POST signup
+// router.post("/signup", (req, res) => {
+//   const { fname, lname, username, password } = req.body;
+//   res.send(
+//     `First name : ${fname} 
+//       Last name : ${lname} 
+//       Username : ${username} 
+//       Password : ${password}`
+//   );
+// });
+
+  router.post('/signup', async (req, res) => {
+    try {
+      const newUserData = await user.create({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        user_name: req.body.user_name,
+        email: req.body.email,
+        password: req.body.password,
+  
+      });
+      res.status(200).json(newUserData);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+
 // STRAIN ROUTES
 // get all strains
 router.get('/strains', (req, res) => {
@@ -91,6 +133,17 @@ router.get('api/review/:id', (req, res) => {
 
 router.post('/review', async (req, res) => {
   try {
+
+    const { user_id, content, rating, strain_id, title, timestamp } = req.body;
+
+    res.send(`
+      ${title} 
+      ${rating} 
+      ${strain_id} 
+      ${content}
+      ${user_id}
+      ${timestamp}`);
+
     const locationData = await Review.create({
       user_id: req.body.user_id,
       content: req.body.content,
@@ -111,6 +164,66 @@ router.post('/review', async (req, res) => {
 //* FAVORITE ROUTES
 // TODO: Create dummy data for favorites to illustrate and test routes
 // GET all favorites
+
+router.get("/favorites", (req, res) => {
+  favorite
+    .findAll({})
+    .then((favorite) => res.json(favorite))
+    .catch((error) => res.status(400).json(error));
+});
+
+// GET favorites by ID
+// TODO: Debug
+router.get("api/favorite/:id", (req, res) => {
+  favorite
+    .findByPk({
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then((favorite) => res.json(favorite))
+    .catch((error) => res.status(400).json(error));
+});
+
+// POST favorite
+router.post("/post-favorite", async (req, res) => {
+  try {
+  const newFav =  await Favorites.create(req.body);
+  //  { strain_id, name, positive_effects, negative_effects, type } = req.body;
+    // res.send(
+    // `${strain_id}
+    // ${name}
+    // ${positive_effects}
+    // ${negative_effects}
+    // ${type}`
+  // );
+  res.status(200).json(newFav);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+// DELETE favorite
+router.delete('/delete-fav/:id', async (req, res) => {
+  // delete a category by its `id` value
+  try {
+    const  deletFav = await Category.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!categoryData) {
+      res.status(404).json({ message: 'Invalid' });
+      return;
+    }
+
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 // router.get("/favorites", (req, res) => {
 //   favorite
 //     .findAll({})
@@ -142,6 +255,7 @@ router.post('/review', async (req, res) => {
 // });
 
 //Refactored POST for Review
+
 
 
 
