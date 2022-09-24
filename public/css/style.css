@@ -72,6 +72,75 @@ button {
     margin-top: 7% !important;
 }
 
+/* Style allREviews page */
+#allReviewSection {
+    margin: 3% 10%;
+}
+
+#allReviews {
+    display: grid;
+    justify-items: center;
+}
+
+#head {
+    padding: 5px 60px !important;
+    padding-top: 10px !important;
+}
+
+#revSec {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 50px;
+}
+
+#postRev {
+    display: grid;
+    gap: 15px;
+    /* justify-items: center; */
+}
+
+#postRevHead {
+    padding: 5px 60px !important;
+    padding-top: 10px !important;
+}
+
+#postRevInpTitle {
+    width: 100%;
+    padding: 10px 0px !important;
+}
+
+#postRatingMainDiv {
+    display: grid;
+    justify-items: center;
+}
+
+#postRating i {
+    color: rgb(30, 96, 62) !important;
+    cursor: pointer;
+}
+
+#subBtnMainDiv {
+    display: grid;
+    justify-items: center;
+}
+
+#subBtn {
+    border: none;
+    color: white;
+    background-color: rgb(30, 96, 62) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#showAllRev {
+    grid-column: span 2 / span 2;
+    display: grid;
+    gap: 20px;
+}
+
+.oneRev {
+    max-width: 600px;
+    padding: 20px 20px !important;
 
 /* profile CSS */
 
