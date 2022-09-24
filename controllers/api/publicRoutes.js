@@ -4,6 +4,7 @@ const router = new express.Router();
 const strain = require('../../models/strain');
 const review = require('../../models/review')
 
+// home routes
 router.get('/', (req, res) => {
     return res.render('verifyAge');
 })
@@ -19,7 +20,6 @@ router.post('/verifyAge', (req, res) => {
 })
 
 // LOGIN ROUTES 
-
 router.post('/login', (req, res) => {
     const { email, password } = req.body;
     
@@ -47,17 +47,9 @@ router.post('/signup', async (req, res) => {
     res.status(400).json(err);
   }
 });
-// router.post('/signup', (req, res) => {
-//     const { fname, lname, username, password } = req.body;
-
-//     res.send(`First name : ${fname} <br>
-//                 Last name : ${lname} <br>
-//                 Username : ${username} <br>
-//                 Password : ${password}`);
-// })
 
 
-
+// STRAIN ROUTES
 // get all strains
 router.get('/strains', (req, res) => {
   strain.findAll({})
@@ -70,8 +62,8 @@ router.get('/strains', (req, res) => {
     // be sure to include its associated Category and Tag data
     strain.findOne({
       where: {
-        id: req.params.id,
-      },
+        id: req.paraems.id,
+      }
     })
     .then((strain) => res.json(strain))
     .catch((error) => res.status(400).json(error))
@@ -95,6 +87,23 @@ router.get('api/review/:id', (req, res) => {
     })
     .then((review) => res.json(review))
     .catch((error) => res.status(400).json(error))
+});
+
+router.post('/review', async (req, res) => {
+  try {
+    const locationData = await Review.create({
+      user_id: req.body.user_id,
+      content: req.body.content,
+      rating: req.body.rating,
+      strain_id: req.body.strain_id,
+      title: req.body.title,
+      timestamp: req.body.timestamp,
+
+    });
+    res.status(200).json(locationData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 
@@ -133,22 +142,7 @@ router.get('api/review/:id', (req, res) => {
 // });
 
 //Refactored POST for Review
-router.post('/review', async (req, res) => {
-    try {
-      const locationData = await Review.create({
-        user_id: req.body.user_id,
-        content: req.body.content,
-        rating: req.body.rating,
-        strain_id: req.body.strain_id,
-        title: req.body.title,
-        timestamp: req.body.timestamp,
 
-      });
-      res.status(200).json(locationData);
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  });
 
 
 
