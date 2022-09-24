@@ -58,15 +58,13 @@
       GoodWeeds
     </h1>
     <!-- Only display the logout button if the user is logged in -->
-    {{#if logged_in}}
     <nav>
 
-      <button class="btn" id="logout">logout</button>
+      <button class="btn" id="logout">LOGOUT</button>
             <button class="btn" id="Reviews">Reviews</button>
       <button class="btn" id="browseStrain">Browse Strains</button>
 
     </nav>
-    {{/if}}
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -76,9 +74,9 @@
   </footer>
 
   <!-- Only include the logout script if the user is logged in -->
-  {{#if logged_in}}
+  {{!-- {{#if logged_in}} --}}
   <script src="/js/logout.js"></script>
-  {{/if}}
+  {{!-- {{/if}} --}}
 </body>
 
 </html>
