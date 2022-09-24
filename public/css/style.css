@@ -1,0 +1,58 @@
+/* Common CSS */
+.boxBorder {
+    border: 2px solid rgb(198, 199, 199) !important;
+}
+
+.buttoBorder {
+    border: rgb(13, 68, 31) !important;
+}
+
+button {
+    background-color: rgb(13, 68, 31) !important;
+}
+
+.signupFormDiv {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+
+.label {
+    flex-basis: 13rem !important;
+    font-size: 20px !important;
+    font-weight: 500;
+}
+
+.bgWhite {
+    background-color: white !important;
+}
+
+.wgBorder {
+    border: 2px solid rgb(226, 225, 225) !important;
+}
+
+#header {
+    display: grid;
+    justify-items: center !important;
+    font-size: 3rem !important;
+    font-weight: 600;
+}
+
+/* VerifyAge Page CSS */
+#verifyAge{
+    display: grid;
+    margin-top: 10% !important;
+    justify-content: center !important;
+}
+
+#radioBtnDiv {
+    margin-left: 15% !important;
+    margin-top: 15% !important;
+}
+
+#verifyAge form {
+    padding: 25px;
+}
+
+#verifyAge form button {
+    margin-left: 40% !important;
+}
