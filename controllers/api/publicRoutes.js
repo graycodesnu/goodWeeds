@@ -30,6 +30,10 @@ router.post("/login", (req, res) => {
 router.get("/signup", (req, res) => {
   res.render("signup");
 });
+
+router.get("/myReviews", (req, res) => {
+  res.render("myReviews");
+});
 // POST signup
 // router.post("/signup", (req, res) => {
 //   const { fname, lname, username, password } = req.body;
