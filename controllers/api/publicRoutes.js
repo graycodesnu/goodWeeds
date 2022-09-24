@@ -64,8 +64,9 @@ router.get("/myReviews", (req, res) => {
 router.get("/strains", (req, res) => {
   strain
     .findAll({})
-    .then((strain) => res.json(strain))
-    .catch((error) => res.status(400).json(error));
+    return res.render('browse')
+    // .then((strain) => res.json(strain))
+    // .catch((error) => res.status(400).json(error));
 });
 // GET strain by id
 router.get("/api/strain/:id", (req, res) => {
