@@ -71,3 +71,42 @@ button {
     margin-left: 33% !important;
     margin-top: 7% !important;
 }
+
+
+/* profile CSS */
+
+/* style tab */
+.tab {
+  overflow: hidden;
+  background-color: rgb(13, 68, 31);
+}
+
+/* style buttons used to open tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  color: antiquewhite;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: crimson;
+}
+
+/* Change tab color when active */
+.tab button.active {
+  background-color: goldenrod;
+}
+
+/* Style myFavorite content tab content */
+.myFavoriteContent {
+  display: none;
+  padding 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
