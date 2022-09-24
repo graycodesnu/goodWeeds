@@ -5,6 +5,10 @@ const review = require("../../models/review");
 const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
 const { reset } = require("nodemon");
+const strainData = require("../../seeds/strainData.json");
+const db = require('../../config/connection')
+
+
 //* AGE VERIFICATION ROUTES
 // GET verify age
 router.get("/", (req, res) => {
@@ -61,12 +65,28 @@ router.get("/myReviews", (req, res) => {
   });
 //* STRAIN ROUTES
 // GET all strains
-router.get("/strains", (req, res) => {
-  strain
-    .findAll({})
-    return res.render('browse')
-    // .then((strain) => res.json(strain))
+router.get("/strains", async (req, res) => {
+  try {
+
+
+    
+    const newStrain = await strain.findAll({})
+  // strain
+  //   .findAll({})
+
+    // * this returns Object object multiple times
+    // return res.render('browse', {strain: strainData});
+
+    // * this returns object SequelizeInstance:strain
+    return res.render('browse', {strain: newStrain});
+
+    
+    // * this gives us contents of strain data
+    // .then((strainData) => res.json(strainData))
     // .catch((error) => res.status(400).json(error));
+  }catch(err){
+    res.status(400).json(err);
+  }
 });
 // GET strain by id
 router.get("/api/strain/:id", (req, res) => {
