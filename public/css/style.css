@@ -96,13 +96,13 @@ button {
 .form-check {
     height: 85%;
     padding-right: 1.5em;
+
 }
 
 #headInfo h1,
 h4 {
     text-align: center;
 }
-
 
 /* Signup Page CSS */
 #signupForm {
@@ -306,6 +306,8 @@ h4 {
     border:solid 1px var(--midnight-green);
     transition: .3s;
 }
+
+
 
 /* * Review Dropdown */
 .dropbtn {

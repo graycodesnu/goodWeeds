@@ -73,31 +73,27 @@ router.get("/myReviews", (req, res) => {
 // GET all strains
 
 router.get("/strains", (req, res) => {
- 
-
-
-    Strain.findAll({
-      attributes: [
-        'id',
-        'name',
-        'type',
-        'positive_effects',
-        'negative_effects'
-        // 'img',
-      ],
-    })
-      .then(strainData => {
-        const strains = strainData.map(strain => strain.get({ plain: true }));
-        res.render('browse', {
-          strains
-        });
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
+  Strain.findAll({
+    attributes: [
+      'id',
+      'name',
+      'type',
+      'positive_effects',
+      'negative_effects',
+      'img'
+    ],
+  })
+    .then(strainData => {
+      const strains = strainData.map(strain => strain.get({ plain: true }));
+      res.render('browse', {
+        strains
       });
-  });
-// });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // GET strain by id
 router.get("/api/strain/:id", (req, res) => {
@@ -149,7 +145,7 @@ router.get("api/review/:id", (req, res) => {
 });
 // POST review
 // todo debug
-router.post("/post-review", (req, res) => {
+router.post("/postReview", (req, res) => {
   try {
     const { user_id, content, rating, strain_id, title, timestamp } = req.body;
     res.send(`
@@ -159,6 +155,7 @@ router.post("/post-review", (req, res) => {
       ${content}
       ${user_id}
       ${timestamp}`);
+      // res.redirect(allReviews)
   } catch (err) {
     res.status(400).json(err);
   }
