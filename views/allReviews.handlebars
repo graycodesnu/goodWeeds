@@ -14,7 +14,7 @@
 
     <div id="allReviewSection" class="d-flex flex-column gap-3">
 
-        <div id="header">
+        {{!-- <div id="header">
             <span>goodWeeds</span>
         </div>
 
@@ -26,7 +26,7 @@
             <div class="col" id="logo">
                 <button type="button" id="logoBtn" class="btn bgWhite wgBorder">Browse</button>
             </div>
-        </div>
+        </div> --}}
 
         <div id="allReviews">
             <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
@@ -39,8 +39,14 @@
                         </div>
 
                         <div id="postRevInp">
-                            <input type="text" name="title" id="postRevInpTitle" class="wgBorder"
-                                placeholder="Which strain are you reviewing?" required>
+                          <button onclick="dropdown()" class="dropbtn">Which Strain Are You Reviewing?</button>
+                          <div id="myDropdown" class="dropdown-content">
+                            <a href="#">strain</a>
+                            <a href="#">strain</a>
+                            <a href="#">strain</a>
+                          </div>
+                            {{!-- <input type="text" name="title" id="postRevInpTitle" class="wgBorder"
+                                placeholder="Which strain are you reviewing?" required> --}}
                         </div>
 
                         <div id="postRatingMainDiv">
@@ -172,6 +178,7 @@
                <script src="/public/js/createReview.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/js/review.js">{{!}}</script>
 </body>
 
 </html>
