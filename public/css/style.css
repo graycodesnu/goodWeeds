@@ -142,6 +142,44 @@ button {
     max-width: 600px;
     padding: 20px 20px !important;
 
+}
+
+/* Styles for Landing Page */
+
+#home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 5% auto !important;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+}
+
+#formSection {
+    padding: 4% 10%;
+    margin-top: 3% !important;
+}
+
+#formSection form button {
+    margin-left: 33% !important;
+    margin-top: 7% !important;
+    margin-bottom: 10% !important;
+}
+
+#newUser h3 {
+    margin-left: 20% !important;
+    margin-top: 5% !important;
+}
+
+#newUser button {
+    margin-left: 30% !important;
+    margin-top: 7% !important;
+}
+
+
 /* profile CSS */
 
 /* style tab */
@@ -175,7 +213,8 @@ button {
 /* Style myFavorite content tab content */
 .myFavoriteContent {
   display: none;
-  padding 6px 12px;
+  padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+
 }
