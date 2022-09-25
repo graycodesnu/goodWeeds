@@ -4,8 +4,17 @@ const strain = require("../../models/strain");
 const review = require("../../models/review");
 const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
+
 const reviewData = require("../../seeds/reviewData.json");
 const { User, Strain } = require("../../models");
+
+
+const { reset } = require("nodemon");
+const strainData = require("../../seeds/strainData.json");
+const db = require('../../config/connection');
+
+
+//* AGE VERIFICATION ROUTES
 
 // GET verify age
 router.get("/", (req, res) => {
@@ -62,6 +71,7 @@ router.get("/myReviews", (req, res) => {
   });
 //* STRAIN ROUTES
 // GET all strains
+
 router.get("/strains", (req, res) => {
  
 
@@ -88,6 +98,7 @@ router.get("/strains", (req, res) => {
       });
   });
 // });
+
 // GET strain by id
 router.get("/api/strain/:id", (req, res) => {
   strain
@@ -129,11 +140,20 @@ router.get("/reviews", async (req, res) => {
 
 
     .findAll({})
+    // json data
     // .then((review) => res.json(review))
+
     return res.render('allReviews', reviewData)
     // res.send("REVIEW PAGE")
     // res.send(reviews)
+
+    // bullet points
+    return res.render('allReviews', {review: reviewData});
+   
     // .catch((error) => res.status(400).json(error));
+
+
+
 });
 // GET review by ID
 router.get("api/review/:id", (req, res) => {
