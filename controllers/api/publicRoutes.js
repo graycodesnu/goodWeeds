@@ -4,8 +4,9 @@ const strain = require("../../models/strain");
 const review = require("../../models/review");
 const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
-const { reset } = require("nodemon");
-//* AGE VERIFICATION ROUTES
+const reviewData = require("../../seeds/reviewData.json");
+const { User, Strain } = require("../../models");
+
 // GET verify age
 router.get("/", (req, res) => {
   return res.render("verifyAge");
@@ -62,11 +63,31 @@ router.get("/myReviews", (req, res) => {
 //* STRAIN ROUTES
 // GET all strains
 router.get("/strains", (req, res) => {
-  strain
-    .findAll({})
-    .then((strain) => res.json(strain))
-    .catch((error) => res.status(400).json(error));
-});
+ 
+
+
+    Strain.findAll({
+      attributes: [
+        'id',
+        'name',
+        'type',
+        'positive_effects',
+        'negative_effects'
+        // 'img',
+      ],
+    })
+      .then(strainData => {
+        const strains = strainData.map(strain => strain.get({ plain: true }));
+        res.render('browse', {
+          strains
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+// });
 // GET strain by id
 router.get("/api/strain/:id", (req, res) => {
   strain
@@ -79,13 +100,37 @@ router.get("/api/strain/:id", (req, res) => {
     .catch((error) => res.status(400).json(error));
 });
 //* REVIEW ROUTES
-// TODO: Add dummy data to reviews table to be able to display route
 // GET all reviews
-router.get("/reviews", (req, res) => {
+router.get("/reviews", async (req, res) => {
   review
+  // try{
+  //   const reviewDB = await User.findAll({
+  //     attributes: [
+  //       "id",
+  //       'username',
+  //     ],
+  //     include: [
+  //       {
+  //         model: Strain, through: Review, as:"user_strains"
+  //       }
+  //     ]
+  //   })
+
+  //   // const userReviews = reviewDB.filter(user => user.id )
+  //   const reviews = reviewDB.map(data => {
+  //     return {name:data.name, content: data.review.content}
+  //   })
+  //   res.render("allReviews", {
+  //     reviews
+  //   })
+  // }catch(err){
+  //   console.log(err)
+  // }
+
+
     .findAll({})
     // .then((review) => res.json(review))
-    return res.render('allReviews')
+    return res.render('allReviews', reviewData)
     // res.send("REVIEW PAGE")
     // res.send(reviews)
     // .catch((error) => res.status(400).json(error));
