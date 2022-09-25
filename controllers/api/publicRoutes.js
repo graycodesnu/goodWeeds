@@ -149,7 +149,7 @@ router.get("api/review/:id", (req, res) => {
 });
 // POST review
 // todo debug
-router.post("/post-review", (req, res) => {
+router.post("/postReview", (req, res) => {
   try {
     const { user_id, content, rating, strain_id, title, timestamp } = req.body;
     res.send(`
@@ -159,6 +159,7 @@ router.post("/post-review", (req, res) => {
       ${content}
       ${user_id}
       ${timestamp}`);
+      // res.redirect(allReviews)
   } catch (err) {
     res.status(400).json(err);
   }
