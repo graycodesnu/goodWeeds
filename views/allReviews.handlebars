@@ -33,6 +33,15 @@
 
             <div id="revSec">
 
+{{!-- handlebars bs --}}
+{{#each review}}
+    <li>{{{review}}}</li>
+  {{/each}}
+
+
+{{!-- {{{review}}} --}}
+
+
                 <form action="/postReview" method="post">
                     <div id="postRev">
                         <div id="postRevHead" class="wgBorder">

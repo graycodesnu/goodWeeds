@@ -6,7 +6,9 @@ const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
 const { reset } = require("nodemon");
 const strainData = require("../../seeds/strainData.json");
-const db = require('../../config/connection')
+const reviewData = require("../../seeds/reviewData.json")
+const db = require('../../config/connection');
+const Review = require("../../models/review");
 
 
 //* AGE VERIFICATION ROUTES
@@ -105,11 +107,15 @@ router.get("/api/strain/:id", (req, res) => {
 router.get("/reviews", (req, res) => {
   review
     .findAll({})
+    // json data
     // .then((review) => res.json(review))
-    return res.render('allReviews')
-    // res.send("REVIEW PAGE")
-    // res.send(reviews)
+    // bullet points
+    return res.render('allReviews', {review: reviewData});
+   
     // .catch((error) => res.status(400).json(error));
+
+
+
 });
 // GET review by ID
 router.get("api/review/:id", (req, res) => {
