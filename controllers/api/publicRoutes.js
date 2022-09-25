@@ -33,8 +33,9 @@ router.post("/verifyAge", (req, res) => {
 // POST login
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
-  res.send(email + " logged in. Password: " + password);
+  res.redirect('/strains');
 });
+
 //* SIGNUP ROUTES
 // GET signup
 router.get("/signup", (req, res) => {
