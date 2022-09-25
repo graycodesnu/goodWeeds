@@ -1,17 +1,21 @@
 <div class="row align-center mb-5">
   <div class="col-md-6">
-
-    {{!-- <h2>Welcome {{user.first_name}}</h2> --}}
   </div>
-  <div class="col-md-6">
-    {{!-- todo add cards here --}}
-    <h3>{{{strain.name}}}</h3>
-    <h2>{{{strain.type}}}</h2>
-    <h2>{{{strain.positive_effects}}}</h2>
-    <h2>{{{strain.negative_effects}}}</h2>
-    
-    {{!-- <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3> --}}
 
+{{#each strains as |strain| }}
+      <div class="row align-center mb-5">
+      <div class="col-md-6">
+      </div>
+      <div class="col-md-6">
+      {{!-- todo add cards here --}}
+      <h2>{{{strain.name}}}</h2>
+    <h3>{{{strain.type}}}</h3>
+    <h3>{{{strain.positive_effects}}}</h3>
+    <h3>{{{strain.negative_effects}}}</h3>
+    <img src="{{{strain.img}}}" style="height: 10em" alt="{{strain.name}}">
+  </div>
+</div>
+{{/each}}
   </div>
 </div>
 

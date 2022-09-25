@@ -4,150 +4,199 @@
             "name": "White Widow",
             "type": "hybrid",
             "positive_effects": "energetic, talkative, creative",
-            "negative_effects": "dry mouth, paranoid, dry eyes"
+            "negative_effects": "dry mouth, paranoid, dry eyes",
+            "img": "https://images.leafly.com/flower-images/white-widow.png"
         },
         {
             "name": "Wedding Cake",
             "type": "hybrid",
             "positive_effects": "relaxed, hungry, creative",
-            "negative_effects": "dizzy, anxious, paranoid"  
+            "negative_effects": "dizzy, anxious, paranoid"  ,
+            "img": "https://leafly-public.s3-us-west-2.amazonaws.com/strains/photos/m2y50HYRBu0dHY4JSdSx_wedding-cake_jman.jpg?w=1200&fm=jpg"
+
         },
         {
             "name": "GG4",
             "type": "hybrid",
             "positive_effects": "relaxed, sleepy, hungry",
-            "negative_effects": "dry mouth, paranoid, dry eyes"
+            "negative_effects": "dry mouth, paranoid, dry eyes",
+            "img": "https://images.weedmaps.com/photos/products/000/032/343/original/50611_remedy_gorilla-glue-_4_1.jpg?fit=fill&fill=solid&fill-color=ffffff&h=640&w=640&auto=format"
+
         },
         {
             "name": "Blue Dream",
             "type": "hybrid",
             "positive_effects": "creative, uplifted, energetic",
-            "negative_effects": "dry mouth, paranoid, dry eyes"
+            "negative_effects": "dry mouth, paranoid, dry eyes",
+            "img": "https://s3-us-west-2.amazonaws.com/leafly-images/flower-images/blue-dream.png?w=1200&fm=jpg"
+
         },
         {
             "name": "Sour Diesel",
             "type": "sativa",
             "positive_effects": "energetic, talkative, creative",
-            "negative_effects": "paranoid, dry mouth, dry eyes"
+            "negative_effects": "paranoid, dry mouth, dry eyes",
+            "img": "https://leafly-public.s3-us-west-2.amazonaws.com/strains/photos/5SPDG4T4TcSO8PgLgWHO_SourDiesel_AdobeStock_171888473.jpg?w=1200&fm=jpg"
+
         },
         {
             "name": "Girl Scout Cookies",
             "type": "hybrid",
             "positive_effects": "hungry, giggly, happy",
-            "negative_effects": "dry mouth, dry eyes, paranoid"
+            "negative_effects": "dry mouth, dry eyes, paranoid",
+            "img": "https://live.staticflickr.com/65535/52384032288_83b6c00a21_m.jpg"
+
         },
         {
             "name": "Mac 1",
             "type": "hybrid",
             "positive_effects": "uplifted, euphoric, energetic",
-            "negative_effects": "dizzy, anxious, paranoid"
+            "negative_effects": "dizzy, anxious, paranoid",
+            "img": "https://live.staticflickr.com/65535/52383794616_57051a3bdb_m.jpg"
+
         },
         {
             "name": "Jack Herer",
             "type": "sativa",
             "positive_effects": "energetic, creative, uplifted",
-            "negative_effects": "paranoid, dry eyes, dry mouth"
+            "negative_effects": "paranoid, dry eyes, dry mouth",
+            "img": "https://live.staticflickr.com/65535/52382860032_0c263e198d_m.jpg"
+
         },
         {
             "name": "Pineapple Express",
             "type": "hybrid",
             "positive_effects": "energetic, happy, talkative",
-            "negative_effects": "dry mouth, paranoid, dry eyes"
+            "negative_effects": "dry mouth, paranoid, dry eyes",
+            "img": "https://live.staticflickr.com/65535/52384107044_b6aa9d0c5d_m.jpg"
+
         },
         {
             "name": "Cereal Milk",
             "type": "hybrid",
             "positive_effects": "relaxed, giggly, happy",
-            "negative_effects": "headache, paranoid, dizzy"
+            "negative_effects": "headache, paranoid, dizzy",
+            "img": "https://live.staticflickr.com/65535/52384107904_1014d57ec8_m.jpg"
+
         },
         {
             "name": "Mandarin Cookies",
             "type": "hybrid",
             "positive_effects": "uplifted, talkative, relaxed",
-            "negative_effects": "dry eyes, headache, paranoid"
+            "negative_effects": "dry eyes, headache, paranoid",
+            "img": "https://live.staticflickr.com/65535/52384036713_c12dea3079_m.jpg"
+
         },
         {
             "name": "Bruce Banner",
             "type": "hybrid",
             "positive_effects": "creative, energetic, euphoric",
-            "negative_effects": "dizzy, dry eyes, dry mouth"
+            "negative_effects": "dizzy, dry eyes, dry mouth",
+            "img": "https://live.staticflickr.com/65535/52384037863_7a766e152d_m.jpg"
+
         },
         {
             "name": "Alien Cookies",
             "type": "hybrid",
             "positive_effects": "happy, sleepy, talkative",
-            "negative_effects": "paranoid, headache, dry eyes"
+            "negative_effects": "paranoid, headache, dry eyes",
+            "img": "https://live.staticflickr.com/65535/52384110519_4105242c0e_m.jpg"
+
         },
         {
             "name": "Grape Stomper",
             "type": "hybrid",
             "positive_effects": "tingly, uplifted, euphoric",
-            "negative_effects": "dizzy, dry mouth, dry eyes"
+            "negative_effects": "dizzy, dry mouth, dry eyes",
+            "img": "https://live.staticflickr.com/65535/52382865372_eb6842f386_m.jpg"
+
         },
         {
             "name": "Bubba Fett",
             "type": "hybrid",
             "positive_effects": "sleepy, hungry, relaxed",
-            "negative_effects": "headache, dry eyes, dizzy"
+            "negative_effects": "headache, dry eyes, dizzy",
+            "img": "https://live.staticflickr.com/65535/52384232280_bd04d43025_m.jpg"
+
         },
         {
             "name": "Bio-Jesus",
             "type": "hybrid",
             "positive_effects": "sleepy, relaxed, hungry",
-            "negative_effects": "dry eyes, dizzy, dry mouth"
+            "negative_effects": "dry eyes, dizzy, dry mouth",
+            "img": "https://live.staticflickr.com/65535/52384112824_5413ef31ae_m.jpg"
+
         },
         {
             "name": "Cherry Chem",
             "type": "hybrid",
             "positive_effects": "creative, tingly, uplifted",
-            "negative_effects": "anxious, dizzy, headache"
+            "negative_effects": "anxious, dizzy, headache",
+            "img": "https://live.staticflickr.com/65535/52384114639_a905abf566_m.jpg"
+
         },
         {
             "name": "Bubble Gum",
             "type": "hybrid",
             "positive_effects": "happy, hungry, euphoric",
-            "negative_effects": "dry eyes, dry mouth, headache"
+            "negative_effects": "dry eyes, dry mouth, headache",
+            "img": "https://live.staticflickr.com/65535/52384041903_89453e4db5_m.jpg"
+
         },
         {
             "name": "Burnt Toast",
             "type": "hybrid",
             "positive_effects": "happy, euphoric, sleepy",
-            "negative_effects": "headache, dry mouth, dizzy"
+            "negative_effects": "headache, dry mouth, dizzy",
+            "img": "https://live.staticflickr.com/65535/52384042503_961aaa621d_m.jpg"
+
         },
         {
             "name": "Northern Lights",
             "type": "indica",
             "positive_effects": "sleepy, hungry, relaxed",
-            "negative_effects": "dry mouth, dry eyes, dizzy"
+            "negative_effects": "dry mouth, dry eyes, dizzy",
+            "img": "https://live.staticflickr.com/65535/52384118944_a3e5557249_m.jpg"
+
         },
         {
             "name": "OG Kush",
             "type": "hybrid",
             "positive_effects": "hungry, sleepy, euphoric",
-            "negative_effects": "dry mouth, dry eyes, paranoid"
+            "negative_effects": "dry mouth, dry eyes, paranoid",
+            "img": "https://live.staticflickr.com/65535/52382875262_312fbf94ce_m.jpg"
+
         },
         {
             "name": "Green Crack",
             "type": "sativa",
             "positive_effects": "energetic, focused, talkative",
-            "negative_effects": "paranoid, anxious, dry eyes"
+            "negative_effects": "paranoid, anxious, dry eyes",
+            "img": "https://live.staticflickr.com/65535/52384122034_d929c7ecf7_m.jpg"
+
         },
         {
             "name": "Amnesia Haze",
             "type": "sativa",
             "positive_effects": "energetic, talkative, giggly",
-            "negative_effects": "paranoid, dry mouth, dizzy"
+            "negative_effects": "paranoid, dry mouth, dizzy",
+            "img": "https://live.staticflickr.com/65535/52382876932_735be3e188_m.jpg"
+
         },
         {
             "name": "Alaskan Thunder Fuck",
             "type": "sativa",
             "positive_effects": "energetic, talkative, uplifted",
-            "negative_effects": "dry mouth, dry eyes, paranoid"
+            "negative_effects": "dry mouth, dry eyes, paranoid",
+            "img": "https://live.staticflickr.com/65535/52382878132_8c08eb9d74_m.jpg"
+
         },
         {
             "name": "Purple Haze",
             "type": "sativa",
             "positive_effects": "energetic, creative, talkative",
-            "negative_effects": "paranoid, dry mouth, dizzy"
+            "negative_effects": "paranoid, dry mouth, dizzy",
+            "img": "https://live.staticflickr.com/65535/52383813816_263ea029f4_m.jpg"
+
         }
 ]
