@@ -32,7 +32,11 @@
             <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
 
             <div id="revSec">
-
+                <h2>{{{review.title}}}</h2>
+                <h3>{{{review.rating}}}</h3>
+                <h3>{{{review.strain_id}}}</h3>
+                <h3>{{{review.content}}}</h3>
+                <h4>{{{review.timestamp}}}</h4>
                 <form action="/postReview" method="post">
                     <div id="postRev">
                         <div id="postRevHead" class="wgBorder">
@@ -68,7 +72,21 @@
                 </form>
 
                 <div id="showAllRev">
-
+                    {{#each reviews as |review| }}
+                    <div class="row align-center mb-5">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                    {{!-- todo add cards here --}}
+                    <h2>{{{review.title}}}</h2>
+                    <h3>{{{review.rating}}}</h3>
+                    <h3>{{{review.strain_id}}}</h3>
+                    <h3>{{{review.content}}}</h3>
+                    <h4>{{{review.timestamp}}}</h4>
+    
+  </div>
+</div>
+{{/each}}
                     <div class="oneRev wgBorder">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
@@ -160,3 +178,6 @@
 </body>
 
 </html>
+
+
+

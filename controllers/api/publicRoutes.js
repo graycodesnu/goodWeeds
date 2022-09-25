@@ -1,11 +1,11 @@
 const express = require("express");
 const router = new express.Router();
 const strain = require("../../models/strain");
-const review = require("../../models/review");
+// const review = require("../../models/review");
 const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
 const reviewData = require("../../seeds/reviewData.json");
-const { User, Strain } = require("../../models");
+const { User, Strain, Review } = require("../../models");
 
 // GET verify age
 router.get("/", (req, res) => {
@@ -102,39 +102,29 @@ router.get("/api/strain/:id", (req, res) => {
 //* REVIEW ROUTES
 // GET all reviews
 router.get("/reviews", async (req, res) => {
-  review
-  // try{
-  //   const reviewDB = await User.findAll({
-  //     attributes: [
-  //       "id",
-  //       'username',
-  //     ],
-  //     include: [
-  //       {
-  //         model: Strain, through: Review, as:"user_strains"
-  //       }
-  //     ]
-  //   })
-
-  //   // const userReviews = reviewDB.filter(user => user.id )
-  //   const reviews = reviewDB.map(data => {
-  //     return {name:data.name, content: data.review.content}
-  //   })
-  //   res.render("allReviews", {
-  //     reviews
-  //   })
-  // }catch(err){
-  //   console.log(err)
-  // }
-
-
-    .findAll({})
-    // .then((review) => res.json(review))
-    return res.render('allReviews', reviewData)
-    // res.send("REVIEW PAGE")
-    // res.send(reviews)
-    // .catch((error) => res.status(400).json(error));
+  Review.findAll({
+    attributes: [
+      'id',
+      'title',
+      'rating',
+      'strain_id',
+      'content',
+      'user_id',
+      'timestamp'
+    ],
+  })
+    .then(reviewData => {
+      const reviews = reviewData.map(review => review.get({ plain: true }));
+      res.render('allReviews', {
+        reviews
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
+
 // GET review by ID
 router.get("api/review/:id", (req, res) => {
   review
