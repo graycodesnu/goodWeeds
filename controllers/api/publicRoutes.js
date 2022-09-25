@@ -1,17 +1,21 @@
 const express = require("express");
 const router = new express.Router();
 const strain = require("../../models/strain");
-const review = require("../../models/review");
+// const review = require("../../models/review");
 const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
+
+const reviewData = require("../../seeds/reviewData.json");
+const { User, Strain, Review } = require("../../models");
+
+
 const { reset } = require("nodemon");
 const strainData = require("../../seeds/strainData.json");
-const reviewData = require("../../seeds/reviewData.json")
 const db = require('../../config/connection');
-const Review = require("../../models/review");
 
 
 //* AGE VERIFICATION ROUTES
+
 // GET verify age
 router.get("/", (req, res) => {
   return res.render("verifyAge");
@@ -67,29 +71,34 @@ router.get("/myReviews", (req, res) => {
   });
 //* STRAIN ROUTES
 // GET all strains
-router.get("/strains", async (req, res) => {
-  try {
+
+router.get("/strains", (req, res) => {
+ 
 
 
-    
-    const newStrain = await strain.findAll({})
-  // strain
-  //   .findAll({})
+    Strain.findAll({
+      attributes: [
+        'id',
+        'name',
+        'type',
+        'positive_effects',
+        'negative_effects'
+        // 'img',
+      ],
+    })
+      .then(strainData => {
+        const strains = strainData.map(strain => strain.get({ plain: true }));
+        res.render('browse', {
+          strains
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+// });
 
-    // * this returns Object object multiple times
-    // return res.render('browse', {strain: strainData});
-
-    // * this returns object SequelizeInstance:strain
-    return res.render('browse', {strain: newStrain});
-
-    
-    // * this gives us contents of strain data
-    // .then((strainData) => res.json(strainData))
-    // .catch((error) => res.status(400).json(error));
-  }catch(err){
-    res.status(400).json(err);
-  }
-});
 // GET strain by id
 router.get("/api/strain/:id", (req, res) => {
   strain
@@ -102,21 +111,31 @@ router.get("/api/strain/:id", (req, res) => {
     .catch((error) => res.status(400).json(error));
 });
 //* REVIEW ROUTES
-// TODO: Add dummy data to reviews table to be able to display route
 // GET all reviews
-router.get("/reviews", (req, res) => {
-  review
-    .findAll({})
-    // json data
-    // .then((review) => res.json(review))
-    // bullet points
-    return res.render('allReviews', {review: reviewData});
-   
-    // .catch((error) => res.status(400).json(error));
-
-
-
+router.get("/reviews", async (req, res) => {
+  Review.findAll({
+    attributes: [
+      'id',
+      'title',
+      'rating',
+      'strain_id',
+      'content',
+      'user_id',
+      'timestamp'
+    ],
+  })
+    .then(reviewData => {
+      const reviews = reviewData.map(review => review.get({ plain: true }));
+      res.render('allReviews', {
+        reviews
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
+
 // GET review by ID
 router.get("api/review/:id", (req, res) => {
   review
