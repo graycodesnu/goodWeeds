@@ -1,41 +1,51 @@
-<!doctype html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-<body>
+  <body>
 
-    <div id="myReviews" class="d-flex flex-column gap-3">
+    <div class="profileBox">
 
-{{!-- tab buttons --}}
-      <div>
-        <button class="tablinks"onclick="openMyFavorites(event, 'My Reviews')">Favorites</button>
+      {{! tab buttons }}
+      <div class="buttondiv">
+        <button
+          class="tablinks tabButton"
+          onclick="clickHandle(event, 'favorites')"
+        >Favorites</button>
+        <button
+          class="tablinks tabButton"
+          onclick="clickHandle(event, 'reviews')"
+        >My Reviews</button>
       </div>
 
-      <div>
-        <button class = "tablinks" onclick="openMyReviews(event)">My Reviews</button>
-      </div>
+      {{! tab content }}
+      <div id="tabready">
 
-{{!-- tab content --}}
-       <div id="myFavorites" class="myFavoritesContent">
-        <h3>Favorites</h3>
-        <p>Favorites Content Placeholder</p>
-       </div>
-       
-       <div id="myReviews" class="myReviewContent">
-        <h3>My Reviews</h3>
-        <p>My Review Content Placeholder</p>
-       </div>
+        <div id="favorites" class="tabcontent">
+          <h3>My Favorites</h3>
+          <p>placeholder</p>
+        </div>
+
+        <div id="reviews" class="tabcontent">
+          <h3>My Reviews</h3>
+          <p>placeholder</p>
+        </div>
+
+      </div>
 
     </div>
 
+    <script src="/public/js/profile.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 
 </html>
