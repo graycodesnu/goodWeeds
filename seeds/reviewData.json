@@ -1,0 +1,82 @@
+[
+    {
+        "title": "gnarly",
+        "rating": "5",
+        "strain_id": "4",
+        "content": "Loved this. New fave.",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "wicked",
+        "rating": "5",
+        "strain_id": "20",
+        "content": "totally awesome",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "awesome",
+        "rating": "5",
+        "strain_id": "22",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "weird",
+        "rating": "5",
+        "strain_id": "7",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "gnarly",
+        "rating": "3",
+        "strain_id": "8",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "gnarly",
+        "rating": "4",
+        "strain_id": "12",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "gnarly",
+        "rating": "5",
+        "strain_id": "16",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "gnarly",
+        "rating": "5",
+        "strain_id": "5",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "gnarly",
+        "rating": "5",
+        "strain_id": "6",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    },
+    {
+        "title": "gnarly",
+        "rating": "5",
+        "strain_id": "4",
+        "content": "totally rad",
+        "user_id": "1",
+        "timestamp": "date"
+    }
+]
