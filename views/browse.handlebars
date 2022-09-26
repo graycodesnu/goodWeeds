@@ -1,22 +1,14 @@
 <div class="row align-center mb-5">
-  <div class="col-md-6">
-  </div>
-
 {{#each strains as |strain| }}
-      <div class="row align-center mb-5">
-      <div class="col-md-6">
-      </div>
-      <div class="col-md-6">
+      <div class="row align-center mb-5 strainBox">
       {{!-- todo add cards here --}}
       <h2>{{{strain.name}}}</h2>
-      <h3>{{{strain.type}}}</h3>
-      <h3>{{{strain.positive_effects}}}</h3>
-    <h3>{{{strain.negative_effects}}}</h3>
-    <img src="{{{strain.img}}}" style="height: 10em" alt="{{strain.name}}">
-  </div>
+      <h4><b>Type:</b> {{{strain.type}}}</h4>
+      <p><b>positive effects:</b> {{{strain.positive_effects}}}</p>
+      <p><b>negative effects:</b> {{{strain.negative_effects}}}</p>
+      <img src="{{{strain.img}}}" style="height: 10em" alt="{{strain.name}}"> 
 </div>
 {{/each}}
-  </div>
 </div>
 
 

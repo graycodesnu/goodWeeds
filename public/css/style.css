@@ -387,8 +387,33 @@ h4 {
 .show {display:block;}
 
 
+/*Strain box*/
+.strainBox {
+ display: inline-block;
+ font-weight:bold;
+ font-size:large;
+ width: 410px;
+ height: 410px;
+ background-color: white;
+ border: var(--midnight-green) 1px solid;
+ border-radius: 10px;
+ margin:15px;
+ box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+}
 
-/* ***************** Rating Buttons */
+.strainBox:hover {
+    border-color: var(--light-green);
+    transition: .03s;
+}
+
+.strainBox img {
+    width: 200px;
+}
+
+.strainBox b {
+    color: var(--midnight-green);
+}
+
 .ratebutton {
   background-color: #2d6A4F !important;
   border-radius: 5px;
@@ -403,3 +428,4 @@ h4 {
 .buttonrow {
   display: flex;
 }
+
