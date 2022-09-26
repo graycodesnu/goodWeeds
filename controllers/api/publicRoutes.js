@@ -42,6 +42,11 @@ router.get("/signup", (req, res) => {
   res.render("signup");
 });
 
+//Get login route
+router.get("/login", (req, res) => {
+  res.render("login");
+});
+
 router.get("/myReviews", (req, res) => {
   res.render("myReviews");
 });
