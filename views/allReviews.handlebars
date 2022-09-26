@@ -30,65 +30,27 @@
 
         <div id="allReviews">
             <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
-
-            {{!-- <div id="revSec">
-                <form action="/postReview" method="post" class="postReview">
-                    <div id="postRev">
-                        <div id="postRevHead" class="wgBorder">
-                            <h5>Thoughts? Write'em here.</h5>
-                        </div>
-
-                        
-                        <div id="postRevInp">
-                          <button onclick="dropdown()" class="dropbtn">Which Strain Are You Reviewing?</button>
-                          <div id="myDropdown" class="dropdown-content">
-                            <a href="#">strain 1</a>
-                            <a href="#">strain 2</a>
-                            <a href="#">strain 3</a>
-                          </div>
-                            {{!-- <input type="text" name="title" id="postRevInpTitle" class="wgBorder"
-                                placeholder="Which strain are you reviewing?" required> --}}
-                        </div>
-
-                        <div id="postRatingMainDiv">
-                            <div id="postRating">
-                                <i class="fa-solid fa-2x fa-star"></i>
-                                <i class="fa-solid fa-2x fa-star"></i>
-                                <i class="fa-solid fa-2x fa-star"></i>
-                                <i class="fa-solid fa-2x fa-star"></i>
-                                <i class="fa-regular fa-2x fa-star-half-stroke"></i>
-                            </div>
-                        </div>
-
-                        <div id="postRevInpDescDiv">
-                            <textarea name="desc" id="postRevInpDesc" class="wgBorder" cols="40" rows="10"
-                                placeholder="Write your review here, my dude." required></textarea>
-                        </div>
-
-                        <div id="subBtnMainDiv">
-                            <div id="subBtnDiv">
-                                <button type="submit" id="subBtn">Submit</button>
-                            </div>
-                        </div>
-                    </div>
-                </form> --}}
-
                 <div id="showAllRev">
                     {{#each reviews as |review| }}
-                    <div class="row align-center mb-5">
-                    <div class="col-md-6">
+                    <div class="row align-center mb-5 reviews">
+                    <div class="col-md-12">
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                     {{!-- todo add cards here --}}
+                    <div class="topCard">
                     <h2>{{{review.title}}}</h2>
                     <h3>{{{review.rating}}} stars</h3>
                     <h3>{{{review.strain_id}}}</h3>
-                    <h3>{{{review.content}}}</h3>
-                    <h4>{{{review.timestamp}}}</h4>
-    
-  </div>
-</div>
-{{/each}}
+
+                    </div>
+                    <div class="bottomCard">
+                    <p>{{{review.content}}}</p>
+                    <p class="date">{{{review.timestamp}}}</p>
+                    </div>
+                    </div>
+                    </div>
+                    {{/each}}
+
                     <div class="oneRev wgBorder">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0">
@@ -174,14 +136,10 @@
 
             </div>
         </div>
-    </div>
-
-               <script src="/public/js/createReview.js"></script>
+    </div> --}}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script src="/js/review.js"></script>{{!}}
-
 </body>
 
 </html>

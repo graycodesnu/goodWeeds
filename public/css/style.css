@@ -383,10 +383,10 @@ h4 {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
 /* Change color of dropdown links on hover */
@@ -398,21 +398,21 @@ h4 {
 
 /*Strain box*/
 .strainBox {
- display: inline-block;
- font-weight:bold;
- font-size:large;
- width: 410px;
- height: 410px;
- background-color: white;
- border: var(--midnight-green) 1px solid;
- border-radius: 10px;
- margin:15px;
- box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+    display: inline-block;
+    font-weight:bold;
+    font-size:large;
+    width: 410px;
+    height: 410px;
+    background-color: white;
+    border: var(--midnight-green) 1px solid;
+    border-radius: 10px;
+    margin:15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
 }
 
 .strainBox:hover {
-    border-color: var(--light-green);
-    transition: .03s;
+    box-shadow: 0 4px 8px 0 rgba(193, 207, 196, 0.2), 0 6px 20px 0 rgba(196, 221, 198, 0.19);
+    transition: .3s;
 }
 
 .strainBox img {
@@ -424,17 +424,46 @@ h4 {
 }
 
 .ratebutton {
-  background-color: #2d6A4F !important;
-  border-radius: 5px;
-  border: none;
-  display: inline-block;
+    background-color: #2d6A4F !important;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
 }
 
 .ratebutton:hover, .ratebutton:focus {
-  background-color: #52B788 !important;
+    background-color: #52B788 !important;
 }
 
 .buttonrow {
-  display: flex;
+    display: flex;
 }
 
+/* Show all reviews styling */
+.reviews {
+    display: inline-block;
+    font-weight:bold;
+    font-size:large;
+    width: 95%;
+    height: 300px;
+    background-color: white;
+    border: var(--midnight-green) 1px solid;
+    border-radius: 10px;
+    margin:15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+}
+
+.reviews:hover {
+    box-shadow: 0 4px 8px 0 rgba(193, 207, 196, 0.2), 0 6px 20px 0 rgba(196, 221, 198, 0.19);
+    transition: .3s;
+}
+
+
+.date {
+    text-align: end;
+}
+
+.topCard {
+   border-bottom:solid 1px #081c15;
+   padding-bottom: 5px;
+   margin-bottom: 30px;
+}

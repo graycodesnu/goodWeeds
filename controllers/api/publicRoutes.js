@@ -14,12 +14,13 @@ const strainData = require("../../seeds/strainData.json");
 const db = require('../../config/connection');
 
 
-//* AGE VERIFICATION ROUTES
+// **** AGE VERIFICATION ROUTES ****
 
 // GET verify age
 router.get("/", (req, res) => {
   return res.render("verifyAge");
 });
+
 // POST verify age
 router.post("/verifyAge", (req, res) => {
   const { ageGroup } = req.body;
@@ -29,14 +30,15 @@ router.post("/verifyAge", (req, res) => {
     return res.render("verifyAge");
   }
 });
-//* LOGIN ROUTES
+
+// **** LOGIN ROUTES ****
 // POST login
 router.post("/login", (req, res) => {
   const { email, password } = req.body;
   res.redirect('/strains');
 });
 
-//* SIGNUP ROUTES
+// **** SIGNUP ROUTES ****
 // GET signup
 router.get("/signup", (req, res) => {
   res.render("signup");
@@ -64,6 +66,7 @@ router.get("/myReviews", (req, res) => {
 //       Password : ${password}`
 //   );
 // });
+
   router.post('/signup', async (req, res) => {
     try {
       const newUserData = await user.create({
@@ -79,9 +82,9 @@ router.get("/myReviews", (req, res) => {
       res.status(400).json(err);
     }
   });
-//* STRAIN ROUTES
-// GET all strains
 
+// **** STRAIN ROUTES ****
+// GET all strains
 router.get("/strains", (req, res) => {
   Strain.findAll({
     attributes: [
@@ -116,7 +119,8 @@ router.get("/api/strain/:id", (req, res) => {
     .then((strain) => res.json(strain))
     .catch((error) => res.status(400).json(error));
 });
-//* REVIEW ROUTES
+
+// **** REVIEW ROUTES ****
 // GET all reviews
 router.get("/reviews", async (req, res) => {
   Review.findAll({
@@ -154,7 +158,6 @@ router.get("api/review/:id", (req, res) => {
     .catch((error) => res.status(400).json(error));
 });
 // POST review
-// todo debug
 router.post("/postReview", (req, res) => {
   try {
     const { user_id, content, rating, strain_id, title, timestamp } = req.body;
@@ -170,8 +173,8 @@ router.post("/postReview", (req, res) => {
     res.status(400).json(err);
   }
 });
-//* FAVORITE ROUTES
-// TODO: Create dummy data for favorites to illustrate and test routes
+
+// **** FAVORITE ROUTES ****
 // GET all favorites
 router.get("/favorites", (req, res) => {
   favorite
@@ -179,8 +182,8 @@ router.get("/favorites", (req, res) => {
     .then((favorite) => res.json(favorite))
     .catch((error) => res.status(400).json(error));
 });
+
 // GET favorites by ID
-// TODO: Debug
 router.get("api/favorite/:id", (req, res) => {
   favorite
     .findByPk({
@@ -191,6 +194,7 @@ router.get("api/favorite/:id", (req, res) => {
     .then((favorite) => res.json(favorite))
     .catch((error) => res.status(400).json(error));
 });
+
 // POST favorite
 router.post("/post-favorite", async (req, res) => {
   try {
@@ -208,6 +212,7 @@ router.post("/post-favorite", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 // DELETE favorite
 router.delete('/delete-fav/:id', async (req, res) => {
   // delete a category by its `id` value
@@ -226,4 +231,5 @@ router.delete('/delete-fav/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 module.exports = router;
