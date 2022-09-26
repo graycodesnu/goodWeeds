@@ -353,3 +353,30 @@ h4 {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+/*Strain box*/
+.strainBox {
+ display: inline-block;
+ font-weight:bold;
+ font-size:large;
+ width: 410px;
+ height: 410px;
+ background-color: white;
+ border: var(--midnight-green) 1px solid;
+ border-radius: 10px;
+ margin:15px;
+ box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+}
+
+.strainBox:hover {
+    border-color: var(--light-green);
+    transition: .03s;
+}
+
+.strainBox img {
+    width: 200px;
+}
+
+.strainBox b {
+    color: var(--midnight-green);
+}
