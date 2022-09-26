@@ -47,17 +47,17 @@
 async function reviewSubmit(event) {
   event.preventDefault();
 
-  const rev_title = document.querySelector('#rev_title').value;
+  const rev_title = document.querySelector('#title').value;
   console.log(rev_title);
 
-  const strain_title = document.querySelector('#strain_title').value;
+  const strain_title = document.querySelector('#strain_id').value;
     console.log(strain_title);
 
-  const user_review = document.querySelector('#user_review').value;
+  const user_review = document.querySelector('#content').value;
     console.log(user_review);
   
   // * Rating Buttons
-  var btnVal = document.getElementById('#revBtn').value;
+  var btnVal = document.getElementById('#rating').value;
   console.log(btnVal);
 
   const response = await fetch(`/postreview`, {
