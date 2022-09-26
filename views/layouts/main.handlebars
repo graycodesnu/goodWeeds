@@ -10,16 +10,24 @@
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
-    <h1>
+    {{!-- <h1>
       goodWeeds
-    </h1>
+    </h1> --}}
     <!-- Only display the logout button if the user is logged in -->
-    <nav>
 
+    <nav>
+      <a href="#" class="navbar-brand">
+      <!-- Logo Image -->
+      <img src="https://live.staticflickr.com/65535/52386136164_6bbc2cbd57_c.jpg" width="500px" alt="" class="d-inline-block align-middle mr-2">
+      <!-- Logo Text -->
+      {{!-- <span class="text-uppercase font-weight-bold">Company</span> --}}
+      </a>
+
+    <div>
       <button class="btn" id="Reviews">Reviews</button>
       <button class="btn" id="browseStrain">Browse Strains</button>
       <button class="btn" id="logout">Logout</button>
-
+    </div>
 
     </nav>
   </header>
