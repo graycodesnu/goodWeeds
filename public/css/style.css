@@ -157,7 +157,7 @@ h4 {
 }
 
 #postRatingMainDiv {
-    display: grid;
+    /* display: grid; */
     justify-items: center;
 }
 
@@ -174,9 +174,13 @@ h4 {
 #subBtn {
     border: none;
     color: white;
-    background-color: rgb(30, 96, 62) !important;
+    background-color: #2d6A4F !important;
     padding: 10px 20px;
     border-radius: 5px;
+}
+
+#subBtn:hover, #subBtn:focus {
+  background-color: #52B788 !important;
 }
 
 #showAllRev {
@@ -329,7 +333,7 @@ h4 {
     color:white;
     background-color: var(--green) !important;
     border:solid 1px var(--midnight-green);
-    transition: .3s;
+    transition: .3s; 
 }
 
 
@@ -342,6 +346,7 @@ h4 {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  border-radius: 5px
 }
 
 /* Dropdown button on hover & focus */
@@ -363,6 +368,8 @@ h4 {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  height: 200px;
+  overflow: auto;
 }
 
 /* Links inside the dropdown */
@@ -378,3 +385,21 @@ h4 {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+
+/* ***************** Rating Buttons */
+.ratebutton {
+  background-color: #2d6A4F !important;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+}
+
+.ratebutton:hover, .ratebutton:focus {
+  background-color: #52B788 !important;
+}
+
+.buttonrow {
+  display: flex;
+}
