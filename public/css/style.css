@@ -22,7 +22,7 @@ body {
 }
 
 .boxBorder {
-    border: 2px solid rgb(198, 199, 199) !important;
+    border: 2px solid var(--midnight-green) !important;
     box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
     background-color: white;
     border-radius: 10px;
