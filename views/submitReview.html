@@ -16,42 +16,57 @@
     <div id="allReviewSection" class="d-flex flex-column gap-3">
 
             <div id="revSec">
-                <form action="/postReview" method="post" class="postReview">
+                
                     <div id="postRev">
                         <div id="postRevHead" class="wgBorder">
-                            <h5>Thoughts? Write'em here.</h5>
+                            <h5>Thoughts? Write 'em here.</h5>
                         </div>
 
-                  <div>
+              <form onSubmit="return reviewSubmit(this);" action="/postReview" method="post" class="postReview">
+                        
+<!-- Rev Title -->
+
+                          <div>
+                            <textarea name="rev_title" id="rev_title" placeholder="Review Title"></textarea>
+                          </div>
+
+<!-- Strain Title -->
+                          <div>
                     
-                            <input type="text" name="title" id="srain_title" class="wgBorder"
-                                placeholder="Which strain are you reviewing?" required>
+                            <textarea type="text" name="strain_title" id="srain_title"
+                                placeholder="Which strain are you reviewing?" required></textarea>
 
                           </div>
 
+<!-- Rev Buttons -->
+
+                    </div>
+
+                        <div class="buttonrow">
+                            <button type="button" id="revBtn" class="ratebutton" value="1">1</button>
+                            <button type="button" id="revBtn" class="ratebutton" value="2">2</button>
+                            <button type="button" id="revBtn" class="ratebutton" value="3">3</button>
+                            <button type="button" id="revBtn" class="ratebutton" value="4">4</button>
+                            <button type="button" id="revBtn" class="ratebutton" value="5">5</button>
                         </div>
 
-                        <div id="postRatingMainDiv" class="buttonrow">
-                            <button type="button" class="ratebutton">1</button>
-                            <button type="button" class="ratebutton">2</button>
-                            <button type="button" class="ratebutton">3</button>
-                            <button type="button" class="ratebutton">4</button>
-                            <button type="button" class="ratebutton">5</button>
-                        </div>
+<!-- Rev Text -->
 
                         <div id="user_review">
-                            <textarea name="desc" id="postRevInpDesc" class="wgBorder" cols="40" rows="10"
-                                placeholder="Write your review here, my dude." required></textarea>
+                            <textarea name="user_review" placeholder="Write your review here, my dude." required></textarea>
                         </div>
 
-                        <div id="subBtnMainDiv">
-                            <div id="subBtnDiv">
-                                <button type="submit" id="subBtn">Submit</button>
+                        <div>
+
+<!-- Submit Button -->
+
+                            <div>
+                                <button type="submit">Submit</button>
                             </div>
                         </div>
-                    </div>
-                </form>
-</div>
+                  </div>
+              </form>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/public/js/submitReview.js"></script>
