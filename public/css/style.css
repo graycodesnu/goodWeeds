@@ -332,7 +332,7 @@ h4 {
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  /* display: none; */
+  display: none;
   position: absolute;
   background-color: #ffff;
   min-width: 160px;
