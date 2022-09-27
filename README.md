@@ -5,6 +5,11 @@ https://goodweeds.herokuapp.com/
 
 ## Description
 
+## credits
+Leafly
+Whimsical
+Heroku
+
 
 ## Technologies Used
 Express<br>
