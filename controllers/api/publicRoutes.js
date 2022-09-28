@@ -1,7 +1,7 @@
 const express = require("express");
 const router = new express.Router();
 const strain = require("../../models/strain");
-// const review = require("../../models/review");
+const review = require("../../models/review");
 const favorite = require("../../models/favorites");
 const Favorites = require("../../models/favorites");
 
@@ -69,7 +69,7 @@ router.get("/myReviews", (req, res) => {
 
   router.post('/signup', async (req, res) => {
     try {
-      const newUserData = await user.create({
+      const newUserData = await User.create({
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         user_name: req.body.user_name,
