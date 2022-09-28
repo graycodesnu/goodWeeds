@@ -60,7 +60,7 @@ async function reviewSubmit(event) {
   var btnVal = document.getElementById('#rating').value;
   console.log(btnVal);
 
-  const response = await fetch(`/postreview`, {
+  const response = await fetch(`/postReview`, {
     method: 'POST',
     body: JSON.stringify({
       rev_title,
