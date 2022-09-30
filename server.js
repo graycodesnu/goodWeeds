@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express')
-const expressHandlebars = require('express-handlebars');
+const expressHandlebars = require('express-handlebars')
+const session = require('express-session');
 
 // * Port setup  
 const app = express();
@@ -22,6 +23,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./controllers/'));
 
+// * Calls express-session
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true,
+}));
+
+// * PORT 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

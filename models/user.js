@@ -56,12 +56,13 @@ User.init(
   },
   {
     // * encrypts password data
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
+    // !!!!!!!!! COMMENT BCRYPT BACK IN ONCE ROUTES ARE FIGURED OUT !!!!!!!!!!
+    // hooks: {
+    //   beforeCreate: async (newUserData) => {
+    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+    //     return newUserData;
+    //   },
+    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,
