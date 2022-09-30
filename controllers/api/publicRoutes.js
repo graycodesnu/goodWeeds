@@ -186,7 +186,7 @@ router.get("/api/review/:id", (req, res) => {
         id: req.params.id,
       },
     })
-    .then((strain) => res.json(strain))
+    .then((review) => res.json(review))
     .catch((error) => res.status(400).json(error));
 });
 
