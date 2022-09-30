@@ -179,16 +179,16 @@ router.get("/reviews", async (req, res) => {
 });
 
 // GET review by ID **May not need**
-// router.get("api/review/:id", (req, res) => {
-//   review
-//     .findOne({
-//       where: {
-//         id: req.params.id,
-//       },
-//     })
-//     .then((review) => res.json(review))
-//     .catch((error) => res.status(400).json(error));
-// });
+router.get("/api/review/:id", (req, res) => {
+  review
+    .findOne({
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then((strain) => res.json(strain))
+    .catch((error) => res.status(400).json(error));
+});
 
 // TODO: GET Route for User Review (ER2)
 
