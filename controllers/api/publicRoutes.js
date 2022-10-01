@@ -99,20 +99,21 @@ router.post('/login', async (req, res) => {
         user_name: req.body.user_name,
       },
     });
-    
+    console.log('string', newUserData)
+
     if (!newUserData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' + user_name + 'user_name' });
+        .json({ message: 'Incorrect username. Please try again!' + req.body.user_name });
       return;
     }
 
-    const validPassword = await newUserData.checkPassword(req.body.password);
+    const validPassword = await newUserData.password;
 
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password. Please try again!' + password + 'password' });
+        .json({ message: 'Incorrect password. Please try again!' + req.body.password });
       return;
     }
 
@@ -131,6 +132,39 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// ? POST Login leveraged from Crunch-Track Team
+// router.post('/login', (req, res) => {
+//   User.findOne({
+//       where: {
+//           user_name: req.body.user_name
+//       }
+
+//   }).then(dbUserData => {
+//       if (!dbUserData) {
+//           res.status(400).json({ message: 'No user with that username!' });
+//           return;
+//       }
+    
+//       // Verify user from password
+//       const validPassword = dbUserData.checkPassword(req.body.password);
+
+//       console.log('PASSWORD', validPassword);
+//       console.log('PLS WORK', req.body.password);
+      
+//       if (!validPassword) {
+//           res.status(400).json({ message: 'Incorrect password!' });
+//           return;
+//       }
+//       req.session.save(() => {
+//           // declare session variables
+//           req.session.user_id = dbUserData.id;
+//           req.session.user_name = dbUserData.user_name;
+//           req.session.loggedIn = true;
+          
+//       res.json({ user: dbUserData, message: 'You are now logged in!' });
+//       });    
+//   });  
+// });
 
 // TODO: GET LOGIN
 
