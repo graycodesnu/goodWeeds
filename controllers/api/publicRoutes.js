@@ -1,13 +1,12 @@
 const express = require("express");
 const router = new express.Router();
-const strain = require("../../models/strain");
-const review = require("../../models/review");
-const favorite = require("../../models/favorites");
-const Favorites = require("../../models/favorites");
+// const strain = require("../../models/strain");
+// const review = require("../../models/review");
+// const favorite = require("../../models/favorites");
+// const Favorites = require("../../models/favorites");
 
 const reviewData = require("../../seeds/reviewData.json");
-const { User, Strain, Review } = require("../../models");
-
+const { User, Strain, Review, Favorites } = require("../../models");
 
 const { reset } = require("nodemon");
 const strainData = require("../../seeds/strainData.json");
@@ -116,9 +115,14 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect password. Please try again!' + req.body.password });
       return;
     }
+    console.log('PRESAVE TEST');
 
     req.session.save(() => {
-      // req.session.logged_in = true;
+
+      console.log('SAVE CONSOLE LOG TEST');
+
+      req.session.logged_in = true;
+      req.session.user_name = dbUserData.user_name
 
       res
         .status(200)

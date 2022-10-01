@@ -49,9 +49,9 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        // length: [8], this line was throwing an error after bcrypt ran.  May need a different kind of validation.
-      },
+      // validate: {
+      //   // length: [8], this line was throwing an error after bcrypt ran.  May need a different kind of validation.
+      // },
     },
   },
   {
