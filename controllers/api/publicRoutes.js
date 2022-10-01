@@ -51,7 +51,7 @@ router.post("/verifyAge", (req, res) => {
   }
 });
 
-// **** LOGIN ROUTES ****
+//! **** LOGIN ROUTES ****
 
 // TODO: POST login *REFACTOR*
 
@@ -90,25 +90,25 @@ router.post("/verifyAge", (req, res) => {
 //   }
 // });
 
-//? POST Login leveraged from Week 14, Activity 28
+//? POST Login leveraged from Week 14, Activity 19
 
 router.post('/login', async (req, res) => {
   try {
-    const newUserData = await User.findOne({
+    const dbUserData = await User.findOne({
       where: {
         user_name: req.body.user_name,
       },
     });
-    console.log('string', newUserData)
+    console.log('TEST STRING CONSOLE LOG', dbUserData)
 
-    if (!newUserData) {
+    if (!dbUserData) {
       res
         .status(400)
         .json({ message: 'Incorrect username. Please try again!' + req.body.user_name });
       return;
     }
 
-    const validPassword = await newUserData.password;
+    const validPassword = await dbUserData.password;
 
     if (!validPassword) {
       res
@@ -118,12 +118,13 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      // req.session.logged_in = true;
 
       res
         .status(200)
-        .json({ user: newUserData, message: 'You are now logged in!' });
+        .json({ user: dbUserData, message: 'You are now logged in!' });
     });
+
     res.redirect('/strains');
 
   } catch (err) {
@@ -159,7 +160,7 @@ router.post('/login', async (req, res) => {
 //           // declare session variables
 //           req.session.user_id = dbUserData.id;
 //           req.session.user_name = dbUserData.user_name;
-//           req.session.loggedIn = true;
+//           req.session.logged_in = true;
           
 //       res.json({ user: dbUserData, message: 'You are now logged in!' });
 //       });    
@@ -167,7 +168,16 @@ router.post('/login', async (req, res) => {
 // });
 
 // TODO: GET LOGIN
-
+router.get('/login/:user_name', (req, res) => {
+  User
+    .findOne({
+      where: {
+        user_name: req.params.user_name,
+      },
+    })
+    .then((loggedInUser) => res.json(loggedInUser))
+    .catch((error) => res.status(400).json(error));
+});
 
 //! **** SIGNUP ROUTES ****
 
@@ -182,7 +192,7 @@ router.post('/login', async (req, res) => {
         password: req.body.password,
       });
       req.session.save(() => {
-        req.session.loggedIn = true;
+        req.session.logged_in = true;
 
         res.status(200).json(newUserData);
       });
@@ -191,9 +201,7 @@ router.post('/login', async (req, res) => {
     }
   });
 
-
-
-// **** STRAIN ROUTES ****
+//! **** STRAIN ROUTES ****
 
 // GET all strains
 router.get("/strains", (req, res) => {
@@ -231,7 +239,8 @@ router.get("/api/strain/:id", (req, res) => {
     .catch((error) => res.status(400).json(error));
 });
 
-// **** REVIEW ROUTES ****
+//! **** REVIEW ROUTES ****
+
 // GET all reviews
 router.get("/reviews", async (req, res) => {
   Review.findAll({
@@ -283,7 +292,7 @@ router.post("/postReview", async(req, res) => {
   }
 });
 
-// **** FAVORITE ROUTES ****
+//! **** FAVORITE ROUTES ****
 
 // GET all favorites
 router.get("/favorites", (req, res) => {
