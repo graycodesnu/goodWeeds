@@ -13,7 +13,7 @@ const { reset } = require("nodemon");
 const strainData = require("../../seeds/strainData.json");
 const db = require('../../config/connection');
 
-// **** MISC PAGE ROUTES ****
+//! **** MISC PAGE ROUTES ****
 
 // GET signup
 router.get("/signup", (req, res) => {
@@ -34,7 +34,7 @@ router.get("/myReviews", (req, res) => {
 });
 
 
-// **** AGE VERIFICATION ROUTES ****
+//! **** AGE VERIFICATION ROUTES ****
 
 // GET verify age
 router.get("/", (req, res) => {
@@ -55,45 +55,87 @@ router.post("/verifyAge", (req, res) => {
 
 // TODO: POST login *REFACTOR*
 
+// router.post('/login', async (req, res) => {
+//   try {
+//     const userData = await User.findOne({ where: { email: req.body.user_name } });
+
+//     if (!userData) {
+//       res
+//         .status(400)
+//         .json({ message: 'Incorrect email or password, please try again' });
+//         // res.redirect('/login')
+//       return;
+//     }
+
+//     const validPassword = await userData.checkPassword(req.body.password);
+
+//     if (!validPassword) {
+//       res
+//         .status(400)
+//         .json({ message: 'Incorrect email or password, please try again' });
+//         // res.redirect('/login')
+//       return;
+//     }
+
+//     res.redirect('/strains')
+//     // req.session.save(() => {
+//     //   req.session.user_id = userData.id;
+//     //   req.session.logged_in = true;
+
+//     //   res.json({ user: userData, message: 'You are now logged in!' });
+//     // });
+
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
+
+//? POST Login leveraged from Week 14, Activity 28
+
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { email: req.body.user_name } });
-
-    if (!userData) {
+    const newUserData = await User.findOne({
+      where: {
+        user_name: req.body.user_name,
+      },
+    });
+    
+    if (!newUserData) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
-        // res.redirect('/login')
+        .json({ message: 'Incorrect email or password. Please try again!' + user_name + 'user_name' });
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword = await newUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: 'Incorrect email or password, please try again' });
-        // res.redirect('/login')
+        .json({ message: 'Incorrect email or password. Please try again!' + password + 'password' });
       return;
     }
 
-    res.redirect('/strains')
-    // req.session.save(() => {
-    //   req.session.user_id = userData.id;
-    //   req.session.logged_in = true;
+    req.session.save(() => {
+      req.session.loggedIn = true;
 
-    //   res.json({ user: userData, message: 'You are now logged in!' });
-    // });
+      res
+        .status(200)
+        .json({ user: newUserData, message: 'You are now logged in!' });
+    });
+    res.redirect('/strains');
 
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err);
+    res.status(500).json(err);
   }
 });
+
 
 // TODO: GET LOGIN
 
 
-// **** SIGNUP ROUTES ****
+//! **** SIGNUP ROUTES ****
 
 // POST signup
   router.post('/signup', async (req, res) => {
@@ -104,9 +146,12 @@ router.post('/login', async (req, res) => {
         user_name: req.body.user_name,
         email: req.body.email,
         password: req.body.password,
-  
       });
-      res.status(200).json(newUserData);
+      req.session.save(() => {
+        req.session.loggedIn = true;
+
+        res.status(200).json(newUserData);
+      });
     } catch (err) {
       res.status(400).json(err);
     }
