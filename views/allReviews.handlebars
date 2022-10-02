@@ -1,4 +1,7 @@
-    <div id="allReviewSection" class="d-flex flex-column gap-3">
+ {{!-- {{#if req.session.loggedIn}}   --}}
+  {{!-- add with auth here --}}
+
+   <div id="allReviewSection" class="d-flex flex-column gap-3">
 
         <div id="allReviews">
             <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
@@ -11,7 +14,7 @@
                             <h5>Thoughts? Write 'em here.</h5>
                         </div>
 
-              <form action="http://localhost:3001/postReview" method="post" class="postReview">
+              <form action="/reviews" method="post" class="postReview">
                         
 <!-- Rev Title -->
 
@@ -20,23 +23,35 @@
                           </div>
 
 <!-- Strain Title -->
-                          <div>
+                          {{!-- <div>
                     
                             <textarea type="text" name="strain_id" id="srain_title"
                                 placeholder="Which strain are you reviewing?" required></textarea>
 
-                          </div>
-
+                          </div> --}}
+<form action="#">
+      <label for="lang">Language</label>
+      <select name="languages" id="strainOpt">
+        <option value="javascript">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="java">Java</option>
+        <option value="golang">Golang</option>
+        <option value="python">Python</option>
+        <option value="c#">C#</option>
+        <option value="C++">C++</option>
+        <option value="erlang">Erlang</option>
+      </select>
+</form>
 <!-- Rev Buttons -->
 
                     </div>
 
                         <div class="buttonrow">
-                            <button type="button" id="rating" class="ratebutton" value="1">1</button>
-                            <button type="button" id="rating" class="ratebutton" value="2">2</button>
-                            <button type="button" id="rating" class="ratebutton" value="3">3</button>
-                            <button type="button" id="rating" class="ratebutton" value="4">4</button>
-                            <button type="button" id="rating" class="ratebutton" value="5">5</button>
+                            <button type="button" id="rating" class="ratebutton" #"1">1</button>
+                            <button type="button" id="rating" class="ratebutton" #"2">2</button>
+                            <button type="button" id="rating" class="ratebutton" #"3">3</button>
+                            <button type="button" id="rating" class="ratebutton" #"4">4</button>
+                            <button type="button" id="rating" class="ratebutton" #"5">5</button>
                         </div>
 
 <!-- Rev Text -->
@@ -86,6 +101,7 @@
 
             </div>
         </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/public/js/submitReview.js"></script>
+    <script src="/js/submitReview.js"></script>
+ 
+  {{!-- {{/if}} --}}

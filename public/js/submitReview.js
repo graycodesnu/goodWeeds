@@ -43,6 +43,20 @@
 
 
 // ***** Submit Review Functionality *****
+console.log('connected');
+
+const tag = document.getElementsByTagName('option');
+console.log(tag);
+
+const opt = document.getElementById('strainOpt');
+console.log(opt);
+
+var value = opt.options[opt.selectedIndex].value;
+console.log("THIS IS A VALUE", value);
+
+var text = opt.options[opt.selectedIndex].text;
+console.log("THIS IS TEXT", text);
+
 
 async function reviewSubmit(event) {
   event.preventDefault();
@@ -79,5 +93,29 @@ async function reviewSubmit(event) {
   }
 
 }
+
+//* Dropdown for strain IDs
+// Toggle between hiding and showing dropdown content
+// function strainDropdown(){
+//   console.log("pls work hehe", strainDropdown);
+
+//   document.getElementById("myDropdown").classList.toggle("show");
+//   const drop = document.getElementById('myDropdown1').value();
+//   console.log(drop);
+// };
+
+// // Close the dropdown menu if the user clicks outside of it
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropbtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
 
 document.querySelector('.postReview').addEventListener('submit', reviewSubmit);
