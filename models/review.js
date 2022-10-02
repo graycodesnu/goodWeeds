@@ -14,6 +14,7 @@ Review.init(
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            defaultValue: 2,
         },
         content: {
             type: DataTypes.STRING,
@@ -22,6 +23,7 @@ Review.init(
         rating: {
             type: DataTypes.INTEGER,
             allowNull: false, 
+            defaultValue: 5,
         },
         strain_id: {
             type: DataTypes.INTEGER,
@@ -37,7 +39,8 @@ Review.init(
         },
         timestamp: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+            defaultValue: Date.now(),
         },
     },
 
