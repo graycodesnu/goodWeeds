@@ -10,6 +10,7 @@
 </head>
 <body>
   <header class="display-flex justify-space-between align-center p-2 header">
+{{!-- add with auth here --}}
     <nav>
       <div>
         <a href="#" class="navbar-brand">
@@ -23,6 +24,7 @@
         <button class="btn" id="logout"><a href="/logout" style="color:white">Logout</a></button>
       </div>
     </nav>
+{{!-- add with auth here --}}
   </header>
 
   <main class="container container-fluid mt-5">
@@ -33,7 +35,7 @@
   </footer>
 
   <!-- Only include the logout script if the user is logged in -->
-  {{#if logged_in}}
+  {{#if loggedIn}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
