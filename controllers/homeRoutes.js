@@ -1,4 +1,7 @@
+const { Model } = require('sequelize');
 const router = require('express').Router();
+const { Strain } = require("../models");
+
 
 // GET signup
 router.get("/signup", (req, res) => {
@@ -38,26 +41,33 @@ router.post("/verifyAge", (req, res) => {
 
 // GET all strains
 router.get("/strains", (req, res) => {
-  Strain.findAll({
-    attributes: [
-      'id',
-      'name',
-      'type',
-      'positive_effects',
-      'negative_effects',
-      'img'
-    ],
-  })
-    .then(strainData => {
-      const strains = strainData.map(strain => strain.get({ plain: true }));
-      res.render('browse', {
-        strains
-      });
-    })
-    .catch(err => {
+  if (!req.session.loggedIn) {
+    res.redirect('/login');
+  } else {
+    try {
+        Strain.findAll({
+          attributes: [
+            'id',
+            'name',
+            'type',
+            'positive_effects',
+            'negative_effects',
+            'img'
+          ],
+        })
+  
+      .then(strainData => {
+        const strains = strainData.map(strain => strain.get({ plain: true }));
+          res.render('browse', {
+              strains
+          });
+        });
+     } catch (err) {
       console.log(err);
       res.status(500).json(err);
-    });
+     }
+  }
+
 });
 
 module.exports = router;
