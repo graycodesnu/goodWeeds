@@ -1,10 +1,3 @@
-// ** Will contain 
-//   - Strain Name 
-//   - Image 
-//   - Positive Effects  
-//   - Negative effects 
-//   - Type 
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

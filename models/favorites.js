@@ -1,6 +1,3 @@
-// ** Will contain:
-//   - User ID 
-//   - Strain ID
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 

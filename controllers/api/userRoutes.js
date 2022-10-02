@@ -42,4 +42,29 @@ router.post('/login', async (req, res) => {
   }
 });
 
+
+// POST signup
+  router.post('/', async (req, res) => {
+    try {
+      const dbUserData = await User.create({
+        first_name: req.body.firstName,
+        last_name: req.body.lastName,
+        user_name: req.body.username,
+        email: req.body.email,
+        password: req.body.password,
+      });
+      
+      console.log('NEW USER, HECK YEAH!', dbUserData);
+
+      req.session.save(() => {
+        req.session.loggedIn = true;
+
+        res.status(200).json(dbUserData);
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(400).json(err);
+    }
+  });
+
 module.exports = router;
