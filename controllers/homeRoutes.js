@@ -33,7 +33,7 @@ router.get("/", (req, res) => {
 router.post("/verifyAge", (req, res) => {
   const { ageGroup } = req.body;
   if (ageGroup === "true") {
-    res.render("home");
+    res.render("login");
   } else {
     return res.render("verifyAge");
   }
