@@ -1,12 +1,3 @@
-// ** Will contain:
-//   - User ID
-//   - Content 
-//   - Rating
-//   - Strain ID 
-//   - Title 
-//   - Time Stamp 
-//   - New Row
-
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
