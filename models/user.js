@@ -9,6 +9,8 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require ('../config/connection');
+const { Router } = require('express');
+const router = require('../controllers');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -49,20 +51,20 @@ User.init(
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      // validate: {
-      //   // length: [8], this line was throwing an error after bcrypt ran.  May need a different kind of validation.
-      // },
+      validate: {
+        length: [8],
+      },
     },
   },
   {
     // * encrypts password data
     // !!!!!!!!! COMMENT BCRYPT BACK IN ONCE ROUTES ARE FIGURED OUT !!!!!!!!!!
-    // hooks: {
-    //   beforeCreate: async (newUserData) => {
-    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
-    //     return newUserData;
-    //   },
-    // },
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
