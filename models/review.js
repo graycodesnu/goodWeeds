@@ -20,7 +20,7 @@ Review.init(
             allowNull: false,
         },
         rating: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false, 
         },
         strain_id: {
