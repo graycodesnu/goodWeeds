@@ -29,14 +29,14 @@ console.log('connected');
 const tag = document.getElementsByTagName('option');
 console.log(tag);
 
-const opt = document.getElementById('strainOpt');
-console.log(opt);
+const languages = document.getElementById('strainOpt');
+console.log(languages);
 
-var value = opt.options[opt.selectedIndex].value;
-console.log("THIS IS A VALUE", value);
+var valueNum = languages.options[languages.selectedIndex].value;
+console.log("THIS IS A VALUE", strainOpt.value);
 
-var text = opt.options[opt.selectedIndex].text;
-console.log("THIS IS TEXT", text);
+var textVal = languages.options[languages.selectedIndex].innerText;
+console.log("THIS IS TEXT", strainOpt.innerText);
 
 
 async function reviewSubmit(event) {
