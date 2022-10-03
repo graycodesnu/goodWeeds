@@ -95,8 +95,10 @@ router.post("/reviews", async(req, res) => {
       user_name: req.session.userName
     });
     //spread operator needed here - to add the userid to the review in the user Id column
-
-    res.status(200).json(newReview)
+    console.log(newReview);
+    const updateReview = newReview.get({ plain: true });
+    console.log(updateReview);
+    res.status(200).json(updateReview);
 
       // res.redirect(allReviews)
   } catch (err) {
