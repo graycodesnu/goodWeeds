@@ -22,60 +22,12 @@
                             <textarea name="title" id="title" placeholder="Review Title"></textarea>
                           </div>
 
-<!-- Strain Title -->
-                          {{!-- <div>
-                    
-                            <textarea type="text" name="strain_id" id="srain_title"
-                                placeholder="Which strain are you reviewing?" required></textarea>
 
-
-                          </div> --}}
-{{!-- <form action="#">
-      <label for="strainOpt">Choose a language:</label>
-      <select name="languages" id="strainOpt" required>
-        <option value="1">White Widow</option>
-        <option value="2">Wedding Cake</option>
-        <option value="3">GG4</option>
-        <option value="4">Blue Dream</option>
-        <option value="5">Sour Diesel</option>
-        <option value="6">Girl Scout Cookies</option>
-        <option value="7">Mac-1</option>
-        <option value="8">Jack Herer</option>
-        <option value="9">Pineapple Express</option>
-        <option value="10">Cereal Milk</option>
-        <option value="11">Mandarine Cookies</option>
-        <option value="12">Bruce Banner</option>
-        <option value="Alien-Cookie">Alien Cookie</option>
-        <option value="Grape-Stomper">Grape Stomper</option>
-        <option value="Bubba-Fett">Bubba Fett</option>
-        <option value="Bio-Jesus">Bio Jesus</option>
-        <option value="Cherry-Chem">Cherry Chem</option>
-        <option value="Bubble-Gum">Bubble Gum</option>
-        <option value="Burnt-Toast">Burnt Toast</option>
-        <option value="Northern-Lights">Northern Lights</option>
-        <option value="OG-Kush">OG Kush</option>
-        <option value="Green-Crack">Green Crack</option>
-        <option value="Amnesia-Haze">Amnesia Haze</option>
-        <option value="Alaskan-Thunder-Fuck">Alaskan Thunder Fuck</option>
-        <option value="Purple-Haze">Purple Haze</option>
-      </select>
-</form> --}}
  <select name="strains" id="strains">
     {{#each strains as |strain|}}
         <option value={{strain.id}}>{{strain.name}}</option>
     {{/each}}
     </select>
-<!-- Rev Buttons -->
-
-                    {{!-- </div> --}}
-
-                        {{!-- <div class="buttonrow">
-                            <button type="button" id="rating" class="ratebutton" #"1">1</button>
-                            <button type="button" id="rating" class="ratebutton" #"2">2</button>
-                            <button type="button" id="rating" class="ratebutton" #"3">3</button>
-                            <button type="button" id="rating" class="ratebutton" #"4">4</button>
-                            <button type="button" id="rating" class="ratebutton" #"5">5</button>
-                        </div> --}}
 
 <!-- Rev Text -->
 
@@ -106,7 +58,8 @@
                     {{!-- todo add cards here --}}
                     <div class="topCard">
                     <h2>{{{review.title}}}</h2>
-                    <h3>{{{review.user_name}}}</h3>
+                    <h3>{{{strain.name}}}</h3>
+                    <h4>{{{review.user_name}}}</h4>
                     {{!-- <h3>{{{review.strain_id}}}</h3> --}}
 
                     </div>
