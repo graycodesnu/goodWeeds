@@ -70,11 +70,11 @@ async function reviewSubmit(event) {
     },
   })
 
-  // if (response.ok) {
-  //   document.location.replace('/allReviews');
-  // } else {
-  //   alert('failed to add review');
-  // }
+  if (response.ok) {
+    document.location.reload();
+  } else {
+    alert('failed to add review');
+  }
 
 }
 
