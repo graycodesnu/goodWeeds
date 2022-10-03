@@ -22,7 +22,7 @@ Review.init(
         },
         rating: {
             type: DataTypes.INTEGER,
-            allowNull: false, 
+            allowNull: true, 
             defaultValue: 5,
         },
         strain_id: {

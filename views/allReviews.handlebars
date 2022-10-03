@@ -14,7 +14,7 @@
                             <h5>Thoughts? Write 'em here.</h5>
                         </div>
 
-              <form action="/reviews" method="post" class="postReview">
+              <form class="postReview">
                         
 <!-- Rev Title -->
 
@@ -23,28 +23,28 @@
                           </div>
 
 <!-- Strain Title -->
-                          <div>
+                          {{!-- <div>
                     
                             <textarea type="text" name="strain_id" id="srain_title"
                                 placeholder="Which strain are you reviewing?" required></textarea>
 
 
                           </div> --}}
-<form action="#">
+{{!-- <form action="#">
       <label for="strainOpt">Choose a language:</label>
       <select name="languages" id="strainOpt" required>
-        <option value="White-Widow">White Widow</option>
-        <option value="Wedding-Cake">Wedding Cake</option>
-        <option value="GG4">GG4</option>
-        <option value="Blue-Dream">Blue Dream</option>
-        <option value="Sour-Diesel">Sour Diesel</option>
-        <option value="Girl-Scout-Cookies">Girl Scout Cookies</option>
-        <option value="Mac-1">Mac-1</option>
-        <option value="Jack-Herer">Jack Herer</option>
-        <option value="Pineapple-Express">Pineapple Express</option>
-        <option value="Cereal-Milk">Cereal Milk</option>
-        <option value="Mandarine-Cookies">Mandarine Cookies</option>
-        <option value="Bruce-Banner">Bruce Banner</option>
+        <option value="1">White Widow</option>
+        <option value="2">Wedding Cake</option>
+        <option value="3">GG4</option>
+        <option value="4">Blue Dream</option>
+        <option value="5">Sour Diesel</option>
+        <option value="6">Girl Scout Cookies</option>
+        <option value="7">Mac-1</option>
+        <option value="8">Jack Herer</option>
+        <option value="9">Pineapple Express</option>
+        <option value="10">Cereal Milk</option>
+        <option value="11">Mandarine Cookies</option>
+        <option value="12">Bruce Banner</option>
         <option value="Alien-Cookie">Alien Cookie</option>
         <option value="Grape-Stomper">Grape Stomper</option>
         <option value="Bubba-Fett">Bubba Fett</option>
@@ -60,7 +60,11 @@
         <option value="Purple-Haze">Purple Haze</option>
       </select>
 </form> --}}
-
+ <select name="strains" id="strains">
+    {{#each strains as |strain|}}
+        <option value={{strain.id}}>{{strain.name}}</option>
+    {{/each}}
+    </select>
 <!-- Rev Buttons -->
 
                     </div>
@@ -75,8 +79,8 @@
 
 <!-- Rev Text -->
 
-                        <div id="content">
-                            <textarea name="content" placeholder="Write your review here, my dude." required></textarea>
+                        <div>
+                            <textarea id="content" placeholder="Write your review here, my dude." required></textarea>
                         </div>
 
                         <div>

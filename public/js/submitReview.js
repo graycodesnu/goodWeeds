@@ -21,7 +21,9 @@
 // var output1 = document.querySelector('.output').textContent = "something";
 // console.log(output1);
 // }
-
+// const strainTitle = document.querySelector('#strains').value;
+// const strain_title = Number(strainTitle);
+//   console.log(strain_title);
 
 // ***** Submit Review Functionality *****
 console.log('connected');
@@ -29,49 +31,50 @@ console.log('connected');
 const tag = document.getElementsByTagName('option');
 console.log(tag);
 
-const languages = document.getElementById('strainOpt');
-console.log(languages);
+// const languages = document.getElementById('strainOpt');
+// console.log(languages);
 
-var valueNum = languages.options[languages.selectedIndex].value;
-console.log("THIS IS A VALUE", strainOpt.value);
+// var valueNum = languages.options[languages.selectedIndex].value;
+// console.log("THIS IS A VALUE", strainOpt.value);
 
-var textVal = languages.options[languages.selectedIndex].innerText;
-console.log("THIS IS TEXT", strainOpt.innerText);
+// var textVal = languages.options[languages.selectedIndex].innerText;
+// console.log("THIS IS TEXT", strainOpt.innerText);
 
 
 async function reviewSubmit(event) {
   event.preventDefault();
 
-  const rev_title = document.querySelector('#title').value;
-  console.log(rev_title);
+  const revTitle = document.querySelector('#title').value;
+  console.log(revTitle);
 
-  const strain_title = document.querySelector('#strain_id').value;
-    console.log(strain_title);
+  const strainId = Number(document.querySelector('#strains').value);
+  // const strainId = Number(strainTitle);
+    console.log(strainId);
 
-  const user_review = document.querySelector('#content').value;
-    console.log(user_review);
+  const userReview = document.querySelector('#content').value;
+    console.log(userReview);
   
   // * Rating Buttons
-  var btnVal = document.getElementById('#rating').value;
-  console.log(btnVal);
+  // var btnVal = document.getElementById('#rating').value;
+  // console.log(btnVal);
 
-  const response = await fetch(`/postReview`, {
+  const response = await fetch(`/reviews`, {
     method: 'POST',
     body: JSON.stringify({
-      rev_title,
-      strain_title,
-      user_review
+      title: revTitle,
+      strain_id: strainId,
+      content: userReview
     }),
     headers: {
     'Content-Type': 'application/json',
     },
   })
 
-  if (response.ok) {
-    document.location.replace('/allReviews.handlebars');
-  } else {
-    alert('failed to add review');
-  }
+  // if (response.ok) {
+  //   document.location.replace('/allReviews');
+  // } else {
+  //   alert('failed to add review');
+  // }
 
 }
 

@@ -73,33 +73,28 @@ router.get("/strains", (req, res) => {
 // GET all reviews
 //* API/REVIEWS/REVIEWS
 router.get("/reviews", async (req, res) => {
-  Review.findAll({
-    attributes: [
-      'id',
-      'title',
-      'rating',
-      'strain_id',
-      'content',
-      'user_id',
-      'timestamp'
-    ],
-  })
-    .then(reviewData => {
+  const reviewData = await Review.findAll()
+  const strainData = await Strain.findAll()
+
+      const strains = strainData.map(strain => strain.get({ plain: true }));
       const reviews = reviewData.map(review => review.get({ plain: true }));
       res.render('allReviews', {
-        reviews
+        strains, reviews
       });
     })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+   
 
 // POST user review
 router.post("/reviews", async(req, res) => {
+  console.log("Body info!!!!", req.body);
+  console.log("session info", req.session.userId)
   try {
-    const newReview = await Review.create(req.body);
+    const newReview = await Review.create({
+      ...req.body,
+      user_id: req.session.userId,
+    });
+    //spread operator needed here - to add the userid to the review in the user Id column
+
     res.status(200).json(newReview)
 
       // res.redirect(allReviews)
