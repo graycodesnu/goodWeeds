@@ -22,7 +22,6 @@
                             <textarea name="title" id="title" placeholder="Review Title"></textarea>
                           </div>
 
-
  <select name="strains" id="strains">
     {{#each strains as |strain|}}
         <option value={{strain.id}}>{{strain.name}}</option>
@@ -58,8 +57,9 @@
                     {{!-- todo add cards here --}}
                     <div class="topCard">
                     <h2>{{{review.title}}}</h2>
-                    <h3>{{{strain.name}}}</h3>
-                    <h4>{{{review.user_name}}}</h4>
+                    <h3>{{{review.strain_name}}}</h3>
+                    <h3>{{{review.user_name}}}</h3>
+                    
                     {{!-- <h3>{{{review.strain_id}}}</h3> --}}
 
                     </div>

@@ -40,6 +40,10 @@ Review.init(
                 key: 'id',
             },
         },
+        strain_name: {
+          type: DataTypes.STRING,
+          allowNull: true,
+        },
         title: {
             type: DataTypes.STRING,
             allowNull: false,
