@@ -31,8 +31,8 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.userId = dbUserData.id
-      req
+      req.session.userId = dbUserData.id;
+      req.session.userName = dbUserData.user_name;
       // This is where we would need a username to be called 
       res
         .status(200)
