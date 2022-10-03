@@ -19,9 +19,10 @@ async function reviewSubmit(event) {
 
   const userReview = document.querySelector('#content').value;
     console.log(userReview);
-  
-  const strainName = Number(document.querySelector('#strains').value);
-    console.log(strainName);
+
+  const optionValue = document.querySelector('#strains');
+  const optionText = optionValue.options[optionValue.selectedIndex].text;
+    console.log(optionText)
 
   // * Rating Buttons
   // var btnVal = document.getElementById('#rating').value;
@@ -33,18 +34,18 @@ async function reviewSubmit(event) {
       title: revTitle,
       strain_id: strainId,
       content: userReview,
-      strain_name: strainName,
+      strain_name: optionText,
     }),
     headers: {
     'Content-Type': 'application/json',
     },
   })
 
-  // if (response.ok) {
-  //   document.location.reload();
-  // } else {
-  //   alert('failed to add review');
-  // }
+  if (response.ok) {
+    document.location.reload();
+  } else {
+    alert('failed to add review');
+  }
 
 
 }
