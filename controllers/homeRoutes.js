@@ -1,6 +1,7 @@
 const { Model } = require('sequelize');
 const router = require('express').Router();
 const { Strain, Review } = require("../models");
+const withAuth = require('../utils/auth')
 
 
 // GET signup
@@ -40,7 +41,7 @@ router.post("/verifyAge", (req, res) => {
 });
 
 // GET all strains
-router.get("/strains", (req, res) => {
+router.get("/strains", withAuth, (req, res) => {
   if (!req.session.loggedIn) {
     res.redirect('/login');
   } else {
@@ -72,7 +73,7 @@ router.get("/strains", (req, res) => {
 
 // GET all reviews
 //* API/REVIEWS/REVIEWS
-router.get("/reviews", async (req, res) => {
+router.get("/reviews", withAuth, async (req, res) => {
   const reviewData = await Review.findAll()
   const strainData = await Strain.findAll()
 

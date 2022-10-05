@@ -113,6 +113,10 @@ h4 {
     text-align: center;
 }
 
+.twentyOne span {
+    color: var(--dark-green);
+}
+
 /* Signup Page CSS */
 #signupForm {
     padding: 4% 5%;
