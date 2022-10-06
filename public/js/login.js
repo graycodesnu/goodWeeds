@@ -50,7 +50,8 @@ const loginFormHandler = async (event) => {
       console.log(response);
 
       if (response.ok) {
-        document.location.replace('/strains');
+        alert('Successfully signed up. Please login.');
+        document.location.replace('/login');
       } else {
         alert('Failed to sign up.');
       }
