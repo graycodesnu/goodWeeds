@@ -17,9 +17,24 @@
 border: solid black 1px;
 } */
 
-body {
+/* body {
+    background-image: url(https://live.staticflickr.com/65535/52408326525_fd1511766c_o.jpg);
+    background-repeat:no-repeat;
+
     background-color: var(--radiant-green);
-}
+} */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: var(--radiant-green) url(https://live.staticflickr.com/65535/52408326525_c96bee156a_o.jpg) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 
 .boxBorder {
     border: 2px solid var(--midnight-green) !important;
@@ -133,9 +148,9 @@ h4 {
 }
 
 /* Style allREviews page */
-#allReviewSection {
+/* #allReviewSection {
     margin: 3% 10%;
-}
+} */
 
 #allReviews {
     display: grid;
@@ -145,23 +160,89 @@ h4 {
 #head {
     padding: 5px 60px !important;
     padding-top: 10px !important;
+    margin-bottom: 30px;
+    font-weight:bold;
 }
 
 #revSec {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 50px;
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    /* gap: 50px; */
+
 }
 
+
 #postRev {
-    display: grid;
+    /* display: grid; */
     gap: 15px;
-    /* justify-items: center; */
+    float: left;
+
+}
+
+.postReview #title {
+    width:100%;
+    height: 60px;
+    font-size:2rem;
+    font-weight:bold;
+    padding:4px;
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+
+}
+
+.chooseStrain {
+    float: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left:10px;
+
+}
+
+.postReview #content {
+    width:100%;
+    height: 400px;
+    font-size:2rem;
+    padding:10px;
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
 }
 
 #postRevHead {
     padding: 5px 60px !important;
     padding-top: 10px !important;
+    margin-top:15px;
+    margin-bottom:20px;
+    color:white;
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    background-color: var(--darkest-green);
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+    text-align: center;
+}
+
+.reviewTopHead {
+    border-color: solid 2px var(--midnight-green);
+}
+
+
+
+.reviewSubmit {
+    width: 30%;
+    height: 50px;
+    margin: 20px;
+    margin-left: 210px;
+    border-radius: 10px;
+    border-top-color: var(--radiant-green);
+    border-bottom-color: var(--midnight-green);
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+}
+
+.headerTitle {
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
 }
 
 #postRevInpTitle {
@@ -216,6 +297,7 @@ h4 {
         .singleRev div {
             flex-direction: column !important;
         }
+
     }
     
     @media only screen and (max-width: 384px) {
@@ -228,6 +310,7 @@ h4 {
         #myReviews {
             margin-left: 0%;
             margin-right: 0%;
+
         }
     }
 
@@ -407,6 +490,7 @@ h4 {
     font-size:large;
     width: 410px;
     height: 410px;
+    grid-area:auto;
     background-color: white;
     border: var(--midnight-green) 1px solid;
     border-radius: 10px;
@@ -416,6 +500,8 @@ h4 {
 
 .strainBox:hover {
     box-shadow: 0 4px 8px 0 rgba(193, 207, 196, 0.2), 0 6px 20px 0 rgba(196, 221, 198, 0.19);
+    border-top: var(--lightest-green);
+    border-color: var(--dark-green);
     transition: .3s;
 }
 
@@ -447,8 +533,9 @@ h4 {
     display: inline-block;
     font-weight:bold;
     font-size:large;
-    width: 95%;
-    height: 300px;
+    padding-top:10px;
+    width: 100%;
+    /* height: 300px; */
     background-color: white;
     border: var(--midnight-green) 1px solid;
     border-radius: 10px;
@@ -461,6 +548,16 @@ h4 {
     transition: .3s;
 }
 
+#strains {
+    margin:10px;
+    width:250px;
+    height:30px;
+    float: right;
+    font-weight:bold;
+    font-size:1.2rem;
+    border-radius:10px;
+    border-color: var(--midnight-green);
+}
 
 .date {
     text-align: end;
@@ -470,4 +567,8 @@ h4 {
    border-bottom:solid 1px #081c15;
    padding-bottom: 5px;
    margin-bottom: 30px;
+}
+
+.topCard h2 {
+    color:#2d6a4f;
 }

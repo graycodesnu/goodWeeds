@@ -4,13 +4,13 @@
 
    <div id="allReviewSection" class="d-flex flex-column gap-3">
         <div id="allReviews">
-            <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
-            <div id="allReviewSection" class="d-flex flex-column gap-3">
-            <div id="revSec">
+            <h2 id="head" class="reviewTopHead">WELCOME TO THE WEED FEED</h2>
+            <div id="allReviewSection" class="d-flex">
+            <div id="revSec" class="container col-md-6 col-sm-12 float-left revSec">
 
                     <div id="postRev">
-                        <div id="postRevHead" class="wgBorder">
-                            <h5>Thoughts? Write 'em here.</h5>
+                        <div id="postRevHead" class="headerTitle">
+                            <h4>Thoughts? Write 'em here.</h4>
                         </div>
 
                     <form class="postReview">
@@ -19,6 +19,7 @@
                     <textarea name="title" id="title" placeholder="Review Title"></textarea>
                 </div>
                 {{!-- Rendering the Strains into the dropdown --}}
+                <p class="chooseStrain">Choose a strain to review:</p>
                 <select name="strains" id="strains">
                     {{#each strains as |strain|}}
                         <option value={{strain.id}}>{{strain.name}}</option>
@@ -31,7 +32,7 @@
                 {{!-- Submit Button --}}
                     <div>
                         <div>
-                            <button type="submit">Submit</button>
+                            <button class="reviewSubmit align-center" type="submit">Submit</button>
                         </div>
 
                     </div>
@@ -39,7 +40,7 @@
                     </form>
             </div>
         {{!-- Show all reviews --}}
-            <div id="showAllRev">
+            <div id="showAllRev" class="col-md-6 col-sm-12 float-right">
             {{#each reviews as |review| }}
             <div class="row align-center mb-5 reviews">
             <div class="col-md-12">
@@ -48,13 +49,13 @@
             {{!-- todo add cards here --}}
             <div class="topCard">
                 <h2>{{{review.title}}}</h2>
-                <h3>{{{review.strain_name}}}</h3>
-                <h3>{{{review.user_name}}}</h3>
+                <h3>Strain: {{{review.strain_name}}}</h3>
+                {{!-- <h3>{{{review.user_name}}}</h3> --}}
             {{!-- <h3>{{{review.strain_id}}}</h3> --}}
             </div>
             <div class="bottomCard">
                 <p>{{{review.content}}}</p>
-                <p class="date">{{{review.timestamp}}}</p>
+                <p class="date">{{{review.user_name}}}</p>
             </div>
             </div>
             </div>
