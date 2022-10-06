@@ -19,6 +19,7 @@
                     <textarea name="title" id="title" placeholder="Review Title"></textarea>
                 </div>
                 {{!-- Rendering the Strains into the dropdown --}}
+                <p class="chooseStrain">Choose a strain to review:</p>
                 <select name="strains" id="strains">
                     {{#each strains as |strain|}}
                         <option value={{strain.id}}>{{strain.name}}</option>
@@ -48,13 +49,13 @@
             {{!-- todo add cards here --}}
             <div class="topCard">
                 <h2>{{{review.title}}}</h2>
-                <h3>{{{review.strain_name}}}</h3>
-                <h3>{{{review.user_name}}}</h3>
+                <h3>Strain: {{{review.strain_name}}}</h3>
+                {{!-- <h3>{{{review.user_name}}}</h3> --}}
             {{!-- <h3>{{{review.strain_id}}}</h3> --}}
             </div>
             <div class="bottomCard">
                 <p>{{{review.content}}}</p>
-                <p class="date">{{{review.timestamp}}}</p>
+                <p class="date">{{{review.user_name}}}</p>
             </div>
             </div>
             </div>

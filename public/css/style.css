@@ -191,6 +191,14 @@ h4 {
 
 }
 
+.chooseStrain {
+    float: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left:10px;
+
+}
+
 .postReview #content {
     width:100%;
     height: 400px;
@@ -217,6 +225,8 @@ h4 {
 .reviewTopHead {
     border-color: solid 2px var(--midnight-green);
 }
+
+
 
 .reviewSubmit {
     width: 30%;
@@ -540,6 +550,13 @@ h4 {
 
 #strains {
     margin:10px;
+    width:250px;
+    height:30px;
+    float: right;
+    font-weight:bold;
+    font-size:1.2rem;
+    border-radius:10px;
+    border-color: var(--midnight-green);
 }
 
 .date {
@@ -550,4 +567,8 @@ h4 {
    border-bottom:solid 1px #081c15;
    padding-bottom: 5px;
    margin-bottom: 30px;
+}
+
+.topCard h2 {
+    color:#2d6a4f;
 }
