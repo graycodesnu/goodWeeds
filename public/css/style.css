@@ -133,9 +133,9 @@ h4 {
 }
 
 /* Style allREviews page */
-#allReviewSection {
+/* #allReviewSection {
     margin: 3% 10%;
-}
+} */
 
 #allReviews {
     display: grid;
@@ -145,23 +145,66 @@ h4 {
 #head {
     padding: 5px 60px !important;
     padding-top: 10px !important;
+    margin-bottom: 30px;
 }
 
 #revSec {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 50px;
+    /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    /* gap: 50px; */
+
 }
 
+
 #postRev {
-    display: grid;
+    /* display: grid; */
     gap: 15px;
-    /* justify-items: center; */
+    float: left;
+
+}
+
+.postReview #title {
+    width:100%;
+    height: 60px;
+    font-size:2rem;
+    font-weight:bold;
+    padding:4px;
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+
+}
+
+.postReview #content {
+    width:100%;
+    height: 400px;
+    font-size:2rem;
+    padding:10px;
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
 }
 
 #postRevHead {
     padding: 5px 60px !important;
     padding-top: 10px !important;
+    margin-bottom:20px;
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
+    text-align: center;
+}
+
+.reviewSubmit {
+    width: 30%;
+    height: 50px;
+    justify-content: center;
+}
+
+.headerTitle {
+    border-color: var(--midnight-green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
 }
 
 #postRevInpTitle {
@@ -447,8 +490,9 @@ h4 {
     display: inline-block;
     font-weight:bold;
     font-size:large;
-    width: 95%;
-    height: 300px;
+    padding-top:10px;
+    width: 100%;
+    /* height: 300px; */
     background-color: white;
     border: var(--midnight-green) 1px solid;
     border-radius: 10px;
@@ -461,6 +505,9 @@ h4 {
     transition: .3s;
 }
 
+#strains {
+    margin:10px;
+}
 
 .date {
     text-align: end;

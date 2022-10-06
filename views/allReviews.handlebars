@@ -5,12 +5,12 @@
    <div id="allReviewSection" class="d-flex flex-column gap-3">
         <div id="allReviews">
             <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
-            <div id="allReviewSection" class="d-flex flex-column gap-3">
-            <div id="revSec">
+            <div id="allReviewSection" class="d-flex">
+            <div id="revSec" class="container col-md-6 float-left revSec">
 
                     <div id="postRev">
-                        <div id="postRevHead" class="wgBorder">
-                            <h5>Thoughts? Write 'em here.</h5>
+                        <div id="postRevHead" class="headerTitle">
+                            <h4>Thoughts? Write 'em here.</h4>
                         </div>
 
                     <form class="postReview">
@@ -31,7 +31,7 @@
                 {{!-- Submit Button --}}
                     <div>
                         <div>
-                            <button type="submit">Submit</button>
+                            <button class="reviewSubmit align-center" type="submit">Submit</button>
                         </div>
 
                     </div>
@@ -39,7 +39,7 @@
                     </form>
             </div>
         {{!-- Show all reviews --}}
-            <div id="showAllRev">
+            <div id="showAllRev" class="col-md-6 float-right">
             {{#each reviews as |review| }}
             <div class="row align-center mb-5 reviews">
             <div class="col-md-12">
