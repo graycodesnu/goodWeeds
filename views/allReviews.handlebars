@@ -1,77 +1,67 @@
  {{!-- {{#if req.session.loggedIn}}   --}}
   {{!-- add with auth here --}}
 
+
    <div id="allReviewSection" class="d-flex flex-column gap-3">
         <div id="allReviews">
             <h5 id="head" class="wgBorder">WELCOME TO THE WEED FEED</h5>
             <div id="allReviewSection" class="d-flex flex-column gap-3">
             <div id="revSec">
+
                     <div id="postRev">
                         <div id="postRevHead" class="wgBorder">
                             <h5>Thoughts? Write 'em here.</h5>
                         </div>
-              <form class="postReview">
-                        
-<!-- Rev Title -->
 
-                          <div>
-                            <textarea name="title" id="title" placeholder="Review Title"></textarea>
-                          </div>
-
-    <select name="strains" id="strains">
-    {{#each strains as |strain|}}
-        <option value={{strain.id}}>{{strain.name}}</option>
-    {{/each}}
-    </select>
-
-<!-- Rev Text -->
-
-                        <div>
-                            <textarea id="content" placeholder="Write your review here, my dude." required></textarea>
-                        </div>
-                        <div>
-
-<!-- Submit Button -->
-
-                            <div>
-                                <button type="submit">Submit</button>
-                            </div>
-                        </div>
-                  </div>
-              </form>
-        </div>  
-
-   
-
-                <div id="showAllRev">
-                    {{#each reviews as |review| }}
-                    <div class="row align-center mb-5 reviews">
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    {{!-- todo add cards here --}}
-                    <div class="topCard">
-                    <h2>{{{review.title}}}</h2>
-                    <h3>{{{review.strain_name}}}</h3>
-                    <h3>{{{review.user_name}}}</h3>
-                    
-                    {{!-- <h3>{{{review.strain_id}}}</h3> --}}
-
-                    </div>
-                    <div class="bottomCard">
-                    <p>{{{review.content}}}</p>
-                    <p class="date">{{{timestamp}}}</p>
-                    </div>
-                    </div>
-                    </div>
-                    {{/each}}
-
-
-
+                    <form class="postReview">
+                    {{!-- Rev Title --}}
+                <div>
+                    <textarea name="title" id="title" placeholder="Review Title"></textarea>
                 </div>
+                {{!-- Rendering the Strains into the dropdown --}}
+                <select name="strains" id="strains">
+                    {{#each strains as |strain|}}
+                        <option value={{strain.id}}>{{strain.name}}</option>
+                    {{/each}}
+                </select>
+                {{!-- Review Text field in the form --}}
+                    <div class="textArea">
+                        <textarea id="content" placeholder="Write your review here, my dude." required></textarea>
+                    </div>
+                {{!-- Submit Button --}}
+                    <div>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+                    </form>
             </div>
+        {{!-- Show all reviews --}}
+            <div id="showAllRev">
+            {{#each reviews as |review| }}
+            <div class="row align-center mb-5 reviews">
+            <div class="col-md-12">
+            </div>
+            <div class="col-md-12">
+            {{!-- todo add cards here --}}
+            <div class="topCard">
+                <h2>{{{review.title}}}</h2>
+                <h3>{{{review.strain_name}}}</h3>
+                <h3>{{{review.user_name}}}</h3>
+            {{!-- <h3>{{{review.strain_id}}}</h3> --}}
+            </div>
+            <div class="bottomCard">
+                <p>{{{review.content}}}</p>
+                <p class="date">{{{review.timestamp}}}</p>
+            </div>
+            </div>
+            </div>
+            {{/each}}
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/submitReview.js"></script>
- 
-  {{!-- {{/if}} --}}
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/submitReview.js"></script>

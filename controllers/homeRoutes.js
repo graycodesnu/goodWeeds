@@ -94,7 +94,6 @@ router.post("/reviews", async(req, res) => {
       ...req.body,
       user_id: req.session.userId,
       user_name: req.session.userName,
-      strain_name: req.body.strainName
     });
     //spread operator needed here - to add the userid to the review in the user Id column
     console.log(newReview);
