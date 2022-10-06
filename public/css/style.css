@@ -17,9 +17,24 @@
 border: solid black 1px;
 } */
 
-body {
+/* body {
+    background-image: url(https://live.staticflickr.com/65535/52408326525_fd1511766c_o.jpg);
+    background-repeat:no-repeat;
+
     background-color: var(--radiant-green);
-}
+} */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: var(--radiant-green) url(https://live.staticflickr.com/65535/52408326525_c96bee156a_o.jpg) center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
 
 .boxBorder {
     border: 2px solid var(--midnight-green) !important;
@@ -146,6 +161,7 @@ h4 {
     padding: 5px 60px !important;
     padding-top: 10px !important;
     margin-bottom: 30px;
+    font-weight:bold;
 }
 
 #revSec {
@@ -188,17 +204,29 @@ h4 {
 #postRevHead {
     padding: 5px 60px !important;
     padding-top: 10px !important;
+    margin-top:15px;
     margin-bottom:20px;
+    color:white;
     border-color: var(--midnight-green);
     border-radius: 10px;
+    background-color: var(--darkest-green);
     box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
     text-align: center;
+}
+
+.reviewTopHead {
+    border-color: solid 2px var(--midnight-green);
 }
 
 .reviewSubmit {
     width: 30%;
     height: 50px;
-    justify-content: center;
+    margin: 20px;
+    margin-left: 210px;
+    border-radius: 10px;
+    border-top-color: var(--radiant-green);
+    border-bottom-color: var(--midnight-green);
+    box-shadow: 0 4px 8px 0 rgba(0, 48, 10, 0.2), 0 6px 20px 0 rgba(0, 49, 4, 0.19);
 }
 
 .headerTitle {
@@ -259,6 +287,7 @@ h4 {
         .singleRev div {
             flex-direction: column !important;
         }
+
     }
     
     @media only screen and (max-width: 384px) {
@@ -271,6 +300,7 @@ h4 {
         #myReviews {
             margin-left: 0%;
             margin-right: 0%;
+
         }
     }
 
@@ -450,6 +480,7 @@ h4 {
     font-size:large;
     width: 410px;
     height: 410px;
+    grid-area:auto;
     background-color: white;
     border: var(--midnight-green) 1px solid;
     border-radius: 10px;
@@ -459,6 +490,8 @@ h4 {
 
 .strainBox:hover {
     box-shadow: 0 4px 8px 0 rgba(193, 207, 196, 0.2), 0 6px 20px 0 rgba(196, 221, 198, 0.19);
+    border-top: var(--lightest-green);
+    border-color: var(--dark-green);
     transition: .3s;
 }
 
