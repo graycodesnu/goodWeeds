@@ -1,30 +1,39 @@
-# goodWeeds
+# [goodWeeds](https://bit.ly/goodWeeds)
 
 ## Introduction
+This project is a result of Northwestern University's full-stack cooding boot camp's Project 2 assignment. The project called for the following: 
 
-## Deployed Link
-https://bit.ly/goodWeeds
++ Use of Node.js and Express.js to create a RESTful API 
++ MySQL and Sequelize ORM for the database 
++ Folder structure that meets the MVC paradigm 
++ Authentication that uses express-session and cookies 
++ Encryption that protects API keys and sensitive information with environment variables 
+
+The live link can be found [here](https://bit.ly/goodWeeds), while the repository can be found [here](https://github.com/graycodesnu/goodWeeds).
 
 ## Description
+Our team created goodWeeds for users who need a secure space to browse popular strains, add strains to their favorites, browse strain reviews, and post their own strain reviews. 
 
 ## Credits
-Leafly
-Whimsical
-Heroku
-The Instructional staff - Lori, Jen, and Asha
-Video Game Reviewer - used for referencing code specfically in the routes, https://github.com/videogame-reviewer/videogame_reviewer
+Thank you to the following people and platforms for playing a role in the creation of our project:
+
++ Our instructional staff - Lori Culberson, Jen Doyle, and Asha Gross 
++ Leafly
++ Whimsical
++ Heroku
++ Our classmates and their project, [Video Game Reviewer](https://github.com/videogame-reviewer/videogame_reviewer), which we referenced for help with creating our routes
 
 
 ## Technologies Used
-Express<br>
-Bcrypt<br>
-Heroku<br>
-Flickr - to convert images<br>
-Bootstrap<br>
-.env<br>
-Nodemon<br>
-Handlebars<br>
-Node<br>
+
++ Node.js
++ Express.js 
++ BCrypt 
++ MySQL
++ Bootstrap
++ Handlebars 
++ Heroku
++ Flickr
 
 ## Screenshots
 
