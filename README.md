@@ -1,11 +1,13 @@
 # goodWeeds
 
+## Introduction
+
 ## Deployed Link
-https://goodweeds.herokuapp.com/
+https://bit.ly/goodWeeds
 
 ## Description
 
-## credits
+## Credits
 Leafly
 Whimsical
 Heroku
